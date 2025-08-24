@@ -1,0 +1,73 @@
+/* 
+    partner-1-start
+*/
+.sr-partner-1 {
+    &-sec-title {
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+    &-wrap {
+        display: flex;
+        align-items: center;
+        gap: 60px;
+        margin-right: 60px;
+
+        @media #{$lg} {
+            gap: 50px;
+            margin-right: 50px;
+        }
+        @media #{$md} {
+            gap: 40px;
+            margin-right: 40px;
+        }
+        @media #{$xs} {
+            gap: 30px;
+            margin-right: 30px;
+        }
+    }
+
+    &-logo {
+        flex: 0 0 auto;
+    }
+
+    &-marquee {
+        overflow: hidden;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(0, 90, 255, 0) 100%);
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                width: 100px;
+            }
+        }
+        &::before {
+            content: "";
+            width: 200px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(1700deg,rgba(255, 255, 255, 1) 0%, rgba(0, 90, 255, 0) 100%);
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                width: 100px;
+            }
+        }
+
+    }
+}
+/* 
+    partner-1-end
+*/

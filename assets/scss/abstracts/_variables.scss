@@ -1,0 +1,34 @@
+@import url('https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+:root {
+
+    scroll-behavior: inherit;
+	
+	--sr-font-1: "Urbanist", sans-serif;
+
+	--sr-clr-pr-1: #7A5AF8;
+
+	--sr-clr-sd-1: #4F4AE6;
+
+	--sr-clr-black-3: #08080A;
+	--sr-clr-black-4: #545963;
+	--sr-clr-black-5: #181D27;
+	--sr-clr-black-6: #D5D7DA;
+	--sr-clr-black-7: #F8F9FC;
+
+	--sr-clr-gd-1: linear-gradient(180deg, #FF7800 0%, #FF4200 100%);
+
+
+	--sr-cube-1: cubic-bezier(0.23, 1, 0.32, 1);
+	
+}
+
+$over:'(min-width: 1800px)';
+$xxxl: 'only screen and (min-width: 1600px) and (max-width: 1799px)';
+$xxl: 'only screen and (min-width: 1400px) and (max-width: 1599px)';
+$xl: 'only screen and (min-width: 1200px) and (max-width: 1399px)';
+$lg: 'only screen and (min-width: 992px) and (max-width: 1199px)';
+$md:'only screen and (min-width: 768px) and (max-width: 991px)';
+$sm: 'only screen and (min-width: 576px) and (max-width: 767px)';
+$xs:'(max-width: 767px)';

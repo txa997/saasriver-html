@@ -1,0 +1,157 @@
+/* 
+    hero-1-start
+*/
+.sr-hero-1 {
+    &-area {
+        padding-top: 230px;
+    }
+
+    &-wrap {
+        text-align: center;
+    }
+    &-member {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        padding: 8px;
+        border: 1px solid var(--sr-clr-black-6);
+        border-radius: 100px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            border-radius: 6px;
+        }
+        @media #{$sm} {
+            flex-wrap: nowrap;
+            border-radius: 100px;
+        }
+
+        &-img {
+            display: inline-flex;
+
+            .img-elm {
+                width: 32px;
+                height: 32px;
+                border-radius: 50%;
+                border: 2px solid #fff;
+                flex: 0 0 auto;
+                position: relative;
+
+                &:not(:first-child) {
+                    margin-left: -10px;
+                }
+
+                img {
+                    transform: scale(105%);
+                    border-radius: 50%;
+                }
+            }
+
+
+        }
+
+        .disc {
+            color: var(--sr-clr-black-5);
+            font-size: 16px;
+        }
+
+        .btn-elm {
+            font-size: 14px;
+            font-weight: 500;
+            background: var(--sr-clr-black-3);
+            color: #fff;
+            border-radius: 100px;
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            padding: 6px 12px;
+        }
+
+    }
+
+
+    &-content {
+        max-width: 855px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .hero-title {
+            font-size: 48px;
+            line-height: 120%;
+            margin-top: 24px;
+
+            @media #{$xl} {
+                font-size: 45px;
+            }
+            @media #{$lg} {
+                font-size: 42px;
+            }
+            @media #{$md} {
+                font-size: 38px;
+            }
+            @media #{$xs} {
+                font-size: 32px;
+            }
+            @media #{$sm} {
+                font-size: 35px;
+            }
+        }
+        .hero-disc {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .hero-btn {
+            margin-top: 32px;
+            display: inline-flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+    }
+
+    &-brand-logo {
+        width: 60px;
+        height: 60px;
+        background: #fff;
+        border: 1px solid rgb(20 19 18 / 6%);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+
+        @media #{$md,$xs} {
+            display: none;
+        }
+
+        &:is(.logo-1) {
+            position: absolute;
+            left: 10%;
+            top: -8%;
+            z-index: -1;
+        }
+        &:is(.logo-2) {
+            position: absolute;
+            right: 0;
+            top: 0;
+            z-index: -1;
+        }
+        &:is(.logo-3) {
+            position: absolute;
+            left: 0;
+            top: 18%;
+            z-index: -1;
+        }
+        &:is(.logo-4) {
+            position: absolute;
+            right: 11%;
+            top: 22%;
+            z-index: -1;
+        }
+    }
+    
+    
+}
+/* 
+    hero-2-end
+*/

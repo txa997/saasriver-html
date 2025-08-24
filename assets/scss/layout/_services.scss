@@ -1,0 +1,115 @@
+/* 
+    services-1-start
+*/
+.sr-services-1 {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        gap: 50px;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+    }
+    &-left {
+        max-width: 635px;
+    }
+
+    &-sec-title {
+        .sec-disc {
+            max-width: 500px;
+            margin-top: 12px;
+        }
+    }
+
+    &-tags {
+        display: flex;
+        gap: 12px;
+        flex-wrap: wrap;
+
+        .tags-elm {
+            background: var(--sr-clr-black-7);
+            border-radius: 100px;
+            color: var(--sr-clr-black-3);
+            font-size: 16px;
+            padding: 9px 16px;
+        }
+    }
+
+    &-right {
+        max-width: 525px;
+        border-left: 1px solid var(--sr-clr-black-6);
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        width: 100%;
+    }
+
+    &-item {
+        padding: 24px 40px;
+        position: relative;
+        z-index: 1;
+
+        &::after {
+            content: "";
+            width: 3px;
+            height: 70%;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1;
+            background: linear-gradient(0deg, rgba(0, 0, 0, 0.05) 0%, var(--sr-clr-pr-1) 100%);
+            position: absolute;
+            left: 0;
+        }
+
+        
+        &::before {
+            content: "";
+            width: 3px;
+            height: 48px;
+            top: 23px;
+            z-index: 1;
+            background: var(--sr-clr-pr-1) ;
+            position: absolute;
+            left: 0;
+        }
+
+        .title {
+            font-size: 20px;
+
+            a {
+                display: flex;
+                align-items: center;
+                gap: 16px;
+            }
+
+            .icon {
+                width: 48px;
+                height: 48px;
+                background: var(--sr-clr-black-7);
+                flex: 0 0 auto;
+                border-radius: 50%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 23px;
+                color: var(--sr-clr-pr-1);
+            }
+        }
+
+        .disc {
+            font-size: 16px;
+            margin-top: 12px;
+        }
+        
+    }
+    
+    
+}
+
+
+
+
+/* 
+    services-1-end
+*/

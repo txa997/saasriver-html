@@ -1,0 +1,78 @@
+/*
+    03. typography
+*/
+
+/* 
+    typography-start
+*/
+.sr-p-1 {
+    font-family: var(--sr-font-1);
+    line-height: 150%;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--sr-clr-black-4);
+    margin-bottom: 0;
+}
+
+
+.sr-h-1 {
+    font-family: var(--sr-font-1);
+    line-height: 130%;
+    font-weight: 600;
+    color: var(--sr-clr-black-3);
+    margin-bottom: 0;
+}
+
+.sr-subtitle-1 {
+    font-family: var(--sr-font-1);
+    display: inline-flex;
+    gap: 8px;
+    align-items: center;
+    font-weight: 400;
+    font-size: 18px;
+    color: var(--sr-clr-black-3);
+    line-height: 110%;
+    border: 1px solid rgb(213 215 218 / 40%);
+    border-radius: 32px;
+    padding: 8px;
+    padding-right: 16px;
+    margin-bottom: 12px;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        background: var(--sr-clr-pr-1);
+        border-radius: 50%;
+        display: inline-flex;
+        flex: 0 0 auto;
+        align-items: center;
+        justify-content: center;
+        color: #fff;
+    }
+}
+
+.sr-sec-title-1 {
+    font-family: var(--sr-font-1);
+    font-weight: 600;
+    line-height: 120%;
+    color: var(--sr-clr-black-3);
+    font-size: 40px;
+    margin-bottom: 0;
+
+    @media #{$lg} {
+        font-size: 38px;
+    }
+    @media #{$md} {
+        font-size: 35px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 33px;
+    }
+}
+
+/* 
+    typography-end
+*/

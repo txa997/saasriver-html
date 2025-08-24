@@ -1,0 +1,75 @@
+/*
+    05. button
+*/
+
+
+/* 
+    button-start
+*/
+
+.sr-offcanvas-btn-1 {
+    width: 42px;
+    height: 42px;
+    border: 1px solid var(--sr-clr-black-5);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--sr-clr-black-5);
+    font-size: 18px;
+    transition: all 0.5s var(--sr-cube-1);
+
+    &:hover {
+        border-color: var(--sr-clr-pr-1);
+        color: var(--sr-clr-pr-1);
+    }
+}
+
+
+.sr-login-btn-1 {
+    font-family: var(--sr-font-1);
+    font-weight: 500;
+    font-size: 16px;
+    color: var(--sr-clr-black-5);
+}
+
+.sr-pr-btn-1 {
+    font-family: var(--sr-font-1);
+    background: var(--sr-clr-pr-1);
+    border-radius: 8px;
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 8px;
+    padding-left: 16px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+
+    .icon {
+        width: 32px;
+        height: 32px;
+        background: #fff;
+        border-radius: 6px;
+        flex: 0 0  auto;
+        align-items: center;
+        justify-content: center;
+        display: flex;
+        font-size: 18px;
+        color: var(--sr-clr-pr-1);
+    }
+
+
+    &:is(.has-v2) {
+        border: 1px solid var(--sr-clr-black-6);
+        background: #fff;
+        color: var(--sr-clr-black-3);
+        .icon {
+            background: var(--sr-clr-black-3);
+            color: #fff;
+        }
+    }
+    
+}
+
+/* 
+    button-end
+*/

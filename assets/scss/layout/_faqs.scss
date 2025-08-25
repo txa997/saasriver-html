@@ -1,0 +1,121 @@
+/* 
+    faqs-1-start
+*/
+
+.sr-accordion {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+
+    &-item {
+        background-color: #fff;
+        border-radius: 12px;
+
+        .item-title {
+            font-size: 20px;
+            font-weight: 500;
+            background: transparent;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 25px;
+            padding: 22px 24px;
+            text-align: left;
+            transition: 0.2s;
+
+            @media #{$lg,$md,$xs} {
+                padding: 22px 15px;
+            }
+
+
+            .icon {
+                width: 30px;
+                height: 8px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                .line {
+                    width: 100%;
+                    height: 2px;
+                    background: var(--sr-clr-pr-1);
+                    transition: all .4s ease-in-out;
+                }
+            }
+            
+    
+            &:is(:not(.collapsed)) {
+                .icon {
+                    .line {
+                        &:nth-child(1) {
+                            transform: rotate(45deg) translateY(4px);
+                        }                        
+                        &:nth-child(2) {
+                            transform: rotate(-45deg) translateY(-4px);
+                        }
+                    }
+                }
+
+            }
+
+            &:is(.collapsed) {
+                &:hover {
+                }
+            }
+
+
+
+        }
+        
+        .item-disc {
+            padding: 22px 24px;
+
+            @media #{$lg,$md,$xs} {
+                padding: 22px 15px;
+            }
+        }
+
+
+    }
+    
+}
+
+
+.sr-faqs-1 {
+    &-wrap {
+        display: grid;
+        gap: 50px;
+        grid-template-columns: 1fr 1.04fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-content {
+        .sec-disc {
+            max-width: 500px;
+            margin-top: 12px;
+        }
+
+        .btn-wrap {
+            margin-top: 32px;
+        }
+    }
+
+    &-accordion {
+        background-color: #FBFBFD;
+        border: 1px solid #F3F3F5;
+        border-radius: 24px;
+        padding:  32px 32px;
+
+        @media #{$lg,$md,$xs} {
+            padding:  32px 20px;
+        }
+    }
+}
+
+/* 
+    faqs-1-end
+*/

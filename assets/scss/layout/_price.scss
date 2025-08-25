@@ -16,6 +16,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
     }
     
     &-card {
@@ -23,6 +30,10 @@
         border: 1px solid rgb(213 215 218 / 25%);
         border-radius: 12px;
         padding: 32px 32px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 32px 22px;
+        }
 
         .icon-x-title {
             display: flex;
@@ -64,6 +75,10 @@
             font-weight: 800;
             margin-top: 12px;
             line-height: 120%;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 40px;
+            }
             span {
                 color: var(--sr-clr-black-4);
                 font-weight: 400;
@@ -103,6 +118,20 @@
             gap: 12px;
             padding: 24px 24px;
             margin-top: 32px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 24px 14px;
+            }
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+
+                &:is(.has-disable) {
+                    opacity: 60%;
+                }
+            }
         }
     }
     

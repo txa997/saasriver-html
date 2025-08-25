@@ -1,0 +1,36 @@
+/* 
+    footer-1-start
+*/
+.sr-footer-1 {
+    &-wrap {
+        display: flex;
+        gap: 48px;
+        justify-content: space-between;
+    }
+
+    &-logo {
+        margin-bottom: 32px;
+    }
+
+    &-disc {
+        max-width: 415px;
+
+        .title {
+            font-size: 24px;
+            margin-bottom: 8px;
+        }
+
+        .disc {
+            margin-top: 8px;
+        }
+
+        .sr-social-1 {
+            margin-top: 32px;
+        }
+    }
+}
+/* 
+    footer-1-end
+*/
+
+

@@ -257,8 +257,163 @@ function afterPageLoad() {
 */
 }
 
+/* 
+    subtitle-1-icon
+*/	
+gsap.utils.toArray('.subtitle_1_icon').forEach((item) => {
+    gsap.from(item, {
+        scale: 0,
+        ease: "ease1",
+        duration: .5,
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: 'play none none reverse',
+                markers: false,
+            },
+        });
+    }
+);
+
+/* 
+    subtitle-1-text
+*/	
+gsap.utils.toArray('.subtitle_1_text').forEach((item) => {
+    gsap.from(item, {
+        x: -32,
+        ease: "ease1",
+        duration: .5,
+            scrollTrigger: {
+                trigger: item,
+                start: "top 80%",
+                toggleActions: 'play none none reverse',
+                markers: false,
+            },
+        });
+    }
+);
 
 
+/* 
+    header-1-menu-link
+*/
+if ($(".header_1_menu_link").length) {
+    var header_1_menu_link = $(".header_1_menu_link .dropdown-menu a");
+    gsap.registerPlugin(SplitText);
+
+    header_1_menu_link.each(function (index, el) {
+        el.split = new SplitText(el, {
+            type: "words",
+        });
+
+        $(el).on("mouseenter", function () {
+            gsap.fromTo(
+                el.split.words,
+                { x: -5, opacity: 0, filter: "blur(3px)" },
+                { x: 0, opacity: 1, filter: "blur(0px)", duration: .5, stagger: -0.1, ease: "ease1", }
+            );
+        });
+    });
+}
+
+/* 
+    pr-button-1-split
+*/
+if ($(".btn_split_1").length) {
+    var splitButton1 = $(".btn_split_1");
+    gsap.registerPlugin(SplitText);
+
+    splitButton1.each(function (index, el) {
+        el.split = new SplitText(el, {
+            type: "words",
+        });
+
+        $(el).on("mouseenter", function () {
+            gsap.fromTo(
+                el.split.words,
+                { x: -30, opacity: 1, filter: "blur(5px)" },
+                { x: 0, opacity: 1, filter: "blur(0px)", duration: .3, stagger: -0.1, ease: "ease1", }
+            );
+        });
+    });
+}
+
+
+
+/* 
+	hero-1-shape-animation
+*/	
+if ($('.sr-hero-1-cursor-shape').length) { 
+    var $bsH1shape = $('.sr-hero-1-cursor-shape');
+    var $bsH1area = $('.sr-hero-1-cursor');
+
+    function bsH1moveCircle(e) {
+        var offset = $bsH1area.offset(); 
+        var relativeX = e.pageX - offset.left; 
+        var relativeY = e.pageY - offset.top; 
+
+        TweenLite.to($bsH1shape, 0.3, {
+            css: {
+                left: relativeX + "px",
+                top: relativeY + "px"
+            }
+        });
+    }
+
+    $bsH1area.on('mousemove', bsH1moveCircle);
+}
+
+
+
+/* 
+	testimonial-1-slider-function
+*/
+if ($('.sr_t1_slider_active').length) {
+	var sr_t1_slider_active = new Swiper(".sr_t1_slider_active", {
+		loop: true,
+		speed: 600,
+		spaceBetween: 24,
+
+		// autoplay: {
+        //     delay: 5000,
+        // },
+
+		// navigation: {
+		// 	nextEl: ".pg_t1_next",
+		// 	prevEl: ".pg_t1_prev",
+		// },
+
+        pagination: {
+			el: ".sr_t1_pagination",
+			clickable: true,
+		},
+
+        breakpoints: {
+            0: {
+                slidesPerView: 1,
+            },
+            576: {
+                slidesPerView: 1,
+            },
+            768: {
+                slidesPerView: 2,
+            },
+            992: {
+                slidesPerView: 2,
+            },
+            1200: {
+                slidesPerView: 3,
+            },
+
+
+        },
+
+	});
+
+
+
+
+}
 
 	
 /* 

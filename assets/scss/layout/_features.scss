@@ -103,6 +103,36 @@
             border-radius: 50%;
             font-size: 18px;
             color: var(--sr-clr-black-3);
+            transition: .3s;
+
+            .icon {
+                position: relative;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                overflow: hidden;
+                i {
+                    transition: .3s;
+                    &:nth-child(1) {
+                        position: absolute;
+                        transform: translate(-15px, 15px);
+                    }
+                }
+            }
+
+            &:hover {
+                background-color: var(--sr-clr-pr-1);
+                border-color: transparent;
+                color: #fff;
+                i {
+                    &:nth-child(1) {
+                        transform: translate(0px,0px);
+                    }
+                    &:nth-child(2) {
+                        transform: translate(15px, -15px);
+                    }
+                }
+            }
         }
 
 

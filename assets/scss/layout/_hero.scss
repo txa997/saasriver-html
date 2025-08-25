@@ -16,6 +16,7 @@
         padding: 8px;
         border: 1px solid var(--sr-clr-black-6);
         border-radius: 100px;
+        background-color: #fff;
 
         @media #{$xs} {
             flex-wrap: wrap;
@@ -65,13 +66,18 @@
             align-items: center;
             gap: 4px;
             padding: 6px 12px;
+            transition: .3s;
+
+            &:hover {
+                background: var(--sr-clr-pr-1);
+            }
         }
 
     }
 
 
     &-content {
-        max-width: 855px;
+        max-width: 775px;
         margin-left: auto;
         margin-right: auto;
 
@@ -151,6 +157,22 @@
     }
     
     
+}
+
+
+.sr-hero-1-cursor-shape {
+    width: 400px;
+    height: 400px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin: -200px 0 0 -200px;
+    background: #fff;
+    z-index: -1;
+    mix-blend-mode: difference;
+    filter: blur(30px);
+    opacity: .1;
+    border-radius: 50%;
 }
 /* 
     hero-2-end

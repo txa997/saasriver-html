@@ -1,10 +1,40 @@
-/*
-    12. element
-*/
 
 /* 
     elements-start
 */
+.sr-rating-1 {
+    display: flex;
+    gap: 2px;
+    font-size: 20px;
+    color: #FFB400;
+}
+
+
+.sr-social-1 {
+    display: flex;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    .link-elm {
+        width: 40px;
+        height: 40px;
+        background: #fff;
+        border-radius: 12px;
+        flex: 0 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 20px;
+        color: var(--sr-clr-pr-1);
+        transition: .3s;
+        
+        &:hover {
+            background: var(--sr-clr-pr-1);
+            color: #fff;
+        }
+    }
+}
+
 
 /* 
     elements-end

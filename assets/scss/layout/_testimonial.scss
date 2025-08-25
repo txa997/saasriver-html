@@ -1,0 +1,119 @@
+/* 
+    testimonial-1-start
+*/
+.sr-testimonial-1 {
+    &-sec-title {
+        max-width: 740px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+
+    &-item {
+        background-color: rgb(248 249 252 / 70%);
+        border: 1px solid rgb(0 0 0 / 3%);
+        border-radius: 20px;
+        padding: 12px;
+        padding-bottom: 24px;
+
+        .content-wrap {
+            border-radius: 20px;
+            background-color: #fff;
+            padding: 32px 32px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 32px 20px;
+            }
+        }
+
+        .rating-x-social {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            gap: 15px;
+            align-items: center;
+        }
+        .author-social {
+            font-size: 22px;
+            color: var(--sr-clr-pr-1);
+            opacity: 40%;
+            transition: .3s;
+        }
+
+        .comment {
+            margin-top: 30px;
+            border-bottom: 1px dashed var(--sr-clr-black-6);
+            padding-bottom: 24px;
+        }
+
+
+        .author {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0 12px;
+            gap: 12px;
+            margin-top: 24px;
+
+            &-img {
+                width: 60px;
+                height: 60px;
+                border-radius: 12px;
+            }
+
+            &-name {
+                font-size: 20px;
+            }
+            &-dg {
+                font-size: 16px;
+                margin-top: 3px;
+            }
+        }
+
+        &:hover {
+            .author-social {
+                opacity: 1;
+            }
+        }
+        
+        
+    }
+    
+
+    &-slider {
+        &-btn {
+            display: flex;
+            justify-content: center;
+            gap: 12px;
+            margin-top: 60px;
+
+            span {
+                margin: 0 !important;
+                width: 48px;
+                height: 6px;
+                background: var(--sr-clr-pr-1);
+                opacity: 1;
+                border-radius: 3px;
+                opacity: .3;
+                transition: .1s;
+
+                &:hover {
+                    opacity: 1;
+                }
+
+                &:is(.swiper-pagination-bullet-active) {
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    
+
+}
+/* 
+    testimonial-1-end
+*/

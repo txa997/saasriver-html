@@ -29,6 +29,11 @@
     font-weight: 500;
     font-size: 16px;
     color: var(--sr-clr-black-5);
+    transition: all .5s var(--sr-cube-1);
+
+    &:hover {
+        color: var(--sr-clr-pr-1);
+    }
 }
 
 .sr-pr-btn-1 {
@@ -43,7 +48,7 @@
     font-size: 16px;
     font-weight: 500;
     color: #fff;
-    transition: .3s;
+    transition: all .5s var(--sr-cube-1);
     overflow: hidden;
 
     .icon {
@@ -59,10 +64,10 @@
         color: var(--sr-clr-pr-1);
         overflow: hidden;
         position: relative;
-        transition: .3s;
+        transition: all .5s var(--sr-cube-1);
 
         i {
-            transition: .3s;
+            transition: all .5s var(--sr-cube-1);
             &:nth-child(1) {
                 position: absolute;
                 transform: translateX(-25px);

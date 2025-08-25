@@ -197,6 +197,7 @@ document.addEventListener("DOMContentLoaded", function () {
 	after-preloader-start
 */
 function initAfterPreloader() {
+	CustomEase.create("ease1", "0.23, 1, 0.32, 1");
 
 	/* 
 		only-LTR-direction
@@ -216,7 +217,7 @@ function initAfterPreloader() {
 	after-page-load-start
 */
 function afterPageLoad() {
-	CustomEase.create("ease1", "0, 0, 0.2, 1");
+
 
 
 
@@ -267,7 +268,7 @@ gsap.utils.toArray('.subtitle_1_icon').forEach((item) => {
         duration: .5,
             scrollTrigger: {
                 trigger: item,
-                start: "top 80%",
+                start: "top 86%",
                 toggleActions: 'play none none reverse',
                 markers: false,
             },
@@ -285,7 +286,7 @@ gsap.utils.toArray('.subtitle_1_text').forEach((item) => {
         duration: .5,
             scrollTrigger: {
                 trigger: item,
-                start: "top 80%",
+                start: "top 86%",
                 toggleActions: 'play none none reverse',
                 markers: false,
             },
@@ -309,8 +310,8 @@ if ($(".header_1_menu_link").length) {
         $(el).on("mouseenter", function () {
             gsap.fromTo(
                 el.split.words,
-                { x: -5, opacity: 0, filter: "blur(3px)" },
-                { x: 0, opacity: 1, filter: "blur(0px)", duration: .5, stagger: -0.1, ease: "ease1", }
+                { x: -5, opacity: 0, filter: "blur(1px)" },
+                { x: 0, opacity: 1, filter: "blur(0px)", duration: .8, stagger: -0.2, ease: "ease1", }
             );
         });
     });
@@ -332,12 +333,53 @@ if ($(".btn_split_1").length) {
             gsap.fromTo(
                 el.split.words,
                 { x: -30, opacity: 1, filter: "blur(5px)" },
-                { x: 0, opacity: 1, filter: "blur(0px)", duration: .3, stagger: -0.1, ease: "ease1", }
+                { x: 0, opacity: 1, filter: "blur(0px)", duration: .5, stagger: -0.1, ease: "ease1", }
             );
         });
     });
 }
 
+
+/* 
+    hover-1-split
+*/
+if ($(".hover_1_split").length) {
+    var hover_1_split = $(".hover_1_split a");
+    gsap.registerPlugin(SplitText);
+
+    hover_1_split.each(function (index, el) {
+        el.split = new SplitText(el, {
+            type: "words",
+        });
+
+        $(el).on("mouseenter", function () {
+            gsap.fromTo(
+                el.split.words,
+                { x: 0, opacity: 1, filter: "blur(0px)" },
+                { 
+                    x: 5, 
+                    opacity: 1, 
+                    filter: "blur(.5px)", 
+                    duration: 0.5, 
+                    stagger: -0.1, 
+                    ease: "ease1" 
+                }
+            );
+        });
+
+
+        $(el).on("mouseleave", function () {
+            gsap.to(el.split.words, { 
+                x: 0, 
+                opacity: 1, 
+                filter: "blur(0px)", 
+                    duration: 0.5, 
+                    stagger: 0.1, 
+                    ease: "ease1" 
+            });
+        });
+    });
+}
 
 
 /* 

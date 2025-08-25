@@ -87,6 +87,11 @@
         .title {
             font-size: 20px;
             margin-bottom: 10px;
+            transition: all .5s var(--sr-cube-1);
+
+            &:hover {
+                color: var(--sr-clr-pr-1);
+            }
         }
         .disc {
             font-size: 16px;
@@ -103,7 +108,7 @@
             border-radius: 50%;
             font-size: 18px;
             color: var(--sr-clr-black-3);
-            transition: .3s;
+            transition: all .5s var(--sr-cube-1);
 
             .icon {
                 position: relative;
@@ -112,7 +117,7 @@
                 justify-content: center;
                 overflow: hidden;
                 i {
-                    transition: .3s;
+                    transition: all .5s var(--sr-cube-1);
                     &:nth-child(1) {
                         position: absolute;
                         transform: translate(-15px, 15px);

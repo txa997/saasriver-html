@@ -1376,6 +1376,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-weight: 500;
   font-size: 16px;
   color: var(--sr-clr-black-5);
+  transition: all 0.5s var(--sr-cube-1);
+}
+.sr-login-btn-1:hover {
+  color: var(--sr-clr-pr-1);
 }
 
 .sr-pr-btn-1 {
@@ -1390,7 +1394,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   font-size: 16px;
   font-weight: 500;
   color: #fff;
-  transition: 0.3s;
+  transition: all 0.5s var(--sr-cube-1);
   overflow: hidden;
 }
 .sr-pr-btn-1 .icon {
@@ -1406,10 +1410,10 @@ input:focus::placeholder, textarea:focus::placeholder {
   color: var(--sr-clr-pr-1);
   overflow: hidden;
   position: relative;
-  transition: 0.3s;
+  transition: all 0.5s var(--sr-cube-1);
 }
 .sr-pr-btn-1 .icon i {
-  transition: 0.3s;
+  transition: all 0.5s var(--sr-cube-1);
 }
 .sr-pr-btn-1 .icon i:nth-child(1) {
   position: absolute;
@@ -2114,7 +2118,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: scaleY(1);
 }
 .sr-main-navigation .navbar-nav li:hover > .dropdown-menu li {
-  animation: fadeInDown 0.5s var(--sr-cube-1) backwards;
+  animation: fadeInDown 0.3s var(--sr-cube-1) backwards;
 }
 .sr-main-navigation .navbar-nav li:hover > .dropdown-menu li:nth-child(1) {
   animation-delay: 70ms;
@@ -2588,6 +2592,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sr-features-1-item .title {
   font-size: 20px;
   margin-bottom: 10px;
+  transition: all 0.5s var(--sr-cube-1);
+}
+.sr-features-1-item .title:hover {
+  color: var(--sr-clr-pr-1);
 }
 .sr-features-1-item .disc {
   font-size: 16px;
@@ -2603,7 +2611,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 50%;
   font-size: 18px;
   color: var(--sr-clr-black-3);
-  transition: 0.3s;
+  transition: all 0.5s var(--sr-cube-1);
 }
 .sr-features-1-item .item-btn .icon {
   position: relative;
@@ -2613,7 +2621,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   overflow: hidden;
 }
 .sr-features-1-item .item-btn .icon i {
-  transition: 0.3s;
+  transition: all 0.5s var(--sr-cube-1);
 }
 .sr-features-1-item .item-btn .icon i:nth-child(1) {
   position: absolute;

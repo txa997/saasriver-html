@@ -89,7 +89,7 @@
                     transform: scaleY(1);
 
                     li {
-                        animation: fadeInDown .5s var(--sr-cube-1) backwards;
+                        animation: fadeInDown .3s var(--sr-cube-1) backwards;
 
                         @for $i from 1 through 20 {
                             &:nth-child(#{$i}) {

@@ -3204,7 +3204,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   width: 100px;
   height: 100px;
   border-radius: 20px;
-  background-color: #fff;
+  background: linear-gradient(135deg, #FFFFFF 0%, #FBFBFB 100%);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3532,6 +3532,7 @@ input:focus::placeholder, textarea:focus::placeholder {
   transform: translateX(-50%);
   top: -54px;
   z-index: -1;
+  text-align: center;
 }
 .sr-footer-1-wrap {
   display: flex;

@@ -185,7 +185,7 @@ input:focus::placeholder, textarea:focus::placeholder {
     }
         
     ::-webkit-scrollbar-thumb {
-        background: #000;
+        background: var(--sr-clr-pr-1);
         border-radius: 6px;
     }
 

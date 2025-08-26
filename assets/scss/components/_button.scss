@@ -109,7 +109,34 @@
             }
         }
     }
-    
+    &:is(.has-v3) {
+        background: var(--sr-clr-gd-1);
+
+        .icon {
+            color: #000;
+        }
+        &:hover {
+            // border-color: transparent;
+            // background: var(--sr-clr-sd-1);
+            // color: #fff;
+            .icon {
+                color: var(--sr-clr-pr-2);
+            }
+        }
+    }
+    &:is(.has-v4) {
+        background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+        border-color: transparent;        
+        color: #fff;
+        .icon {
+            background: var(--sr-clr-gd-1);
+            color: #fff;
+        }
+
+        &:hover {
+            color: var(--sr-clr-pr-2);
+        }
+    }
 }
 
 /* 

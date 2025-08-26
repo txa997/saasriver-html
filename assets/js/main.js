@@ -243,7 +243,7 @@ function initAfterPreloader() {
 					duration: 1,
 
 					ease: "ease1",
-					stagger: 0.04,
+					stagger: 0.08,
 					delay: delayValue, 
 				});
 			});
@@ -287,7 +287,7 @@ function initAfterPreloader() {
 					duration: 1,
 
 					ease: "ease1",
-					stagger: 0.04,
+					stagger: 0.08,
 					delay: delayValue, 
 				});
 			});

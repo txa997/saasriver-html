@@ -71,6 +71,7 @@ CSS INDEX
   scroll-behavior: inherit;
   --sr-font-1: "Urbanist", sans-serif;
   --sr-clr-pr-1: #7A5AF8;
+  --sr-clr-pr-2: #FF4200;
   --sr-clr-sd-1: #4F4AE6;
   --sr-clr-black-3: #08080A;
   --sr-clr-black-4: #545963;
@@ -1103,11 +1104,28 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 0;
 }
 
+.sr-p-2 {
+  font-family: var(--sr-font-1);
+  line-height: 150%;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--sr-clr-black-6);
+  margin-bottom: 0;
+}
+
 .sr-h-1 {
   font-family: var(--sr-font-1);
   line-height: 130%;
   font-weight: 600;
   color: var(--sr-clr-black-3);
+  margin-bottom: 0;
+}
+
+.sr-h-2 {
+  font-family: var(--sr-font-1);
+  line-height: 130%;
+  font-weight: 600;
+  color: #fff;
   margin-bottom: 0;
 }
 
@@ -1137,6 +1155,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   justify-content: center;
   color: #fff;
   will-change: width, height;
+}
+.sr-subtitle-1:is(.has-v2) {
+  background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.07) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: #fff;
+}
+.sr-subtitle-1:is(.has-v2) .icon {
+  background: var(--sr-clr-gd-1);
 }
 
 .sr-sec-title-1 {
@@ -1446,6 +1472,27 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sr-pr-btn-1:is(.has-v2):hover .icon {
   background: #fff;
   color: var(--sr-clr-pr-1);
+}
+.sr-pr-btn-1:is(.has-v3) {
+  background: var(--sr-clr-gd-1);
+}
+.sr-pr-btn-1:is(.has-v3) .icon {
+  color: #000;
+}
+.sr-pr-btn-1:is(.has-v3):hover .icon {
+  color: var(--sr-clr-pr-2);
+}
+.sr-pr-btn-1:is(.has-v4) {
+  background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+  border-color: transparent;
+  color: #fff;
+}
+.sr-pr-btn-1:is(.has-v4) .icon {
+  background: var(--sr-clr-gd-1);
+  color: #fff;
+}
+.sr-pr-btn-1:is(.has-v4):hover {
+  color: var(--sr-clr-pr-2);
 }
 
 /* 
@@ -2273,6 +2320,55 @@ input:focus::placeholder, textarea:focus::placeholder {
     header-1-end
 */
 /* 
+    header-2-start
+*/
+.has-header-2 .sr-header-1-wrap {
+  position: relative;
+  z-index: 1;
+  background: transparent;
+}
+.has-header-2 .sr-header-1-wrap::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.8) 0%, rgba(255, 255, 255, 0.6) 100%);
+  background-blend-mode: overlay;
+  backdrop-filter: blur(47.8641px);
+  border-radius: 12px;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: -1;
+  opacity: 0.08;
+}
+.has-header-2 .sr-header-1-action-link .sr-login-btn-1 {
+  color: var(--sr-clr-black-6);
+}
+.has-header-2 .sr-header-1-action-link .sr-login-btn-1:hover {
+  color: var(--sr-clr-pr-2);
+}
+.has-header-2 .sr-header-1-action-link .sr-offcanvas-btn-1 {
+  border: 1px solid var(--sr-clr-black-6);
+  color: var(--sr-clr-black-6);
+}
+.has-header-2 .sr-header-1-action-link .sr-offcanvas-btn-1:hover {
+  border: 1px solid var(--sr-clr-pr-2);
+  color: var(--sr-clr-pr-2);
+}
+.has-header-2:is(.sr-main-navigation) ul li a {
+  color: var(--sr-clr-black-6);
+}
+.has-header-2:is(.sr-main-navigation) ul li:hover > a {
+  color: var(--sr-clr-pr-2);
+}
+.has-header-2:is(.sr-main-navigation) ul li .dropdown-menu {
+  background-color: #191D1E;
+}
+
+/* 
+    header-2-end
+*/
+/* 
     sticky-header-css-start
 */
 .wa_sticky_header {
@@ -2467,6 +2563,110 @@ input:focus::placeholder, textarea:focus::placeholder {
   filter: blur(30px);
   opacity: 0.1;
   border-radius: 50%;
+}
+
+/* 
+    hero-1-end
+*/
+/* 
+    hero-2-start
+*/
+.has-hero-2:is(.sr-hero-1-member) {
+  background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-blend-mode: overlay;
+  border-color: transparent;
+}
+.has-hero-2:is(.sr-hero-1-member) .disc {
+  color: #fff;
+}
+.has-hero-2:is(.sr-hero-1-member) .img-elm {
+  border: 1.5px solid #fff;
+}
+.has-hero-2:is(.sr-hero-1-member) .btn-elm {
+  background-color: #fff;
+  color: #000;
+}
+.has-hero-2:is(.sr-hero-1-member) .btn-elm:hover {
+  color: var(--sr-clr-pr-2);
+}
+.has-hero-2:is(.sr-hero-1-content) .hero-title {
+  font-size: 60px;
+  font-weight: 500;
+}
+.has-hero-2:is(.sr-hero-1-content) .hero-title b {
+  font-weight: 800;
+}
+
+.sr-hero-2-apps {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 52px;
+}
+.sr-hero-2-apps .left {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  align-items: start;
+}
+.sr-hero-2-apps-logo {
+  display: inline-flex;
+  align-items: center;
+  background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+  background-blend-mode: overlay;
+  border-radius: 120px;
+  gap: 12px;
+  padding: 8px;
+  padding-right: 20px;
+}
+.sr-hero-2-apps-logo .icon {
+  width: 48px;
+  height: 48px;
+}
+.sr-hero-2-apps-logo .logo {
+  width: 48px;
+  height: 48px;
+  flex: 0 0 auto;
+  display: flex;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 50%;
+  padding: 8px;
+}
+.sr-hero-2-apps-big-logo {
+  width: 100px;
+  height: 100px;
+  background: var(--sr-clr-gd-1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 24px;
+  padding: 10px;
+  position: relative;
+  /* z-index: 1; */
+}
+.sr-hero-2-apps-big-logo::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: var(--sr-clr-gd-1);
+  background-blend-mode: overlay;
+  border-radius: 25px;
+  z-index: -1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: scale(1.2);
+  opacity: 0.15;
+}
+.sr-hero-2-apps .right {
+  display: flex;
+  flex-direction: column;
+  gap: 150px;
+  align-items: end;
+}
+.sr-hero-2-apps .right .sr-hero-2-apps-logo {
+  padding: 8px;
+  padding-left: 20px;
 }
 
 /* 
@@ -2784,6 +2984,28 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     partner-1-end
+*/
+/* 
+    partner-2-start
+*/
+.sr-partner-2-title {
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.sr-partner-2-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-left: -48px;
+  margin-right: -48px;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-top: 60px;
+}
+
+/* 
+    partner-2-end
 */
 /* 
     services-1-start
@@ -3663,6 +3885,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 /* 
     home-css-start
 */
+.sr-home-2 {
+  background-color: #0B0D0C;
+}
+
 /* 
     home-css-end
 */

@@ -10,7 +10,7 @@
 	position: fixed;
 	inset: 0;
 	z-index: 9999999;
-	background: #000;
+	background: #fff;
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -37,7 +37,7 @@
 	}
 	&-percentage {
 		text-align: center;
-		color: #fff;
+		color: #000;
 		transition: .4s ease-in-out;
 
 		.percentage-number {
@@ -57,7 +57,7 @@
 			#pg-fill {
 				width: 0%;
 				height: 100%;
-				background: var(--pg-clr-pr-1);
+				background: var(--sr-clr-pr-1);
 				transition: width 0.3s ease;
 			}
 		}

@@ -199,11 +199,99 @@ document.addEventListener("DOMContentLoaded", function () {
 function initAfterPreloader() {
 	CustomEase.create("ease1", "0.23, 1, 0.32, 1");
 
+
+
 	/* 
 		only-LTR-direction
 	*/
 	if (getComputedStyle(document.body).direction !== "rtl") {
+		/* 
+			section-title-1
+		*/	
+		if ($(".sec_title_1").length) {
+			var sec_title_1 = $(".sec_title_1");
+			if (sec_title_1.length == 0) return;
 
+			gsap.registerPlugin(SplitText);
+
+			sec_title_1.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "lines,words",
+					linesClass: "split-line",
+				});
+
+				let delayValue = $(el).attr("data-split-delay") || "0s";
+				delayValue = parseFloat(delayValue) || 0; 
+
+				if ($(el).hasClass("sec_title_1")) {
+					gsap.set(el.split.words, {
+						y: 30,
+                        filter: "blur(3px)",
+                        opacity: 0,
+					});
+				}
+
+				el.anim = gsap.to(el.split.words, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						toggleActions: 'play none none reverse',
+					},
+					y: 0,
+                    filter: "blur(0px)",
+					opacity: 1,
+					duration: 1,
+
+					ease: "ease1",
+					stagger: 0.04,
+					delay: delayValue, 
+				});
+			});
+		}
+
+        /* 
+			section-title-1
+		*/	
+		if ($(".sec_title_2").length) {
+			var sec_title_2 = $(".sec_title_2");
+			if (sec_title_2.length == 0) return;
+
+			gsap.registerPlugin(SplitText);
+
+			sec_title_2.each(function (index, el) {
+				el.split = new SplitText(el, {
+					type: "lines,words",
+					linesClass: "split-line",
+				});
+
+				let delayValue = $(el).attr("data-split-delay") || "0s";
+				delayValue = parseFloat(delayValue) || 0; 
+
+				if ($(el).hasClass("sec_title_2")) {
+					gsap.set(el.split.words, {
+						x: 30,
+                        filter: "blur(3px)",
+                        opacity: 0,
+					});
+				}
+
+				el.anim = gsap.to(el.split.words, {
+					scrollTrigger: {
+						trigger: el,
+						start: "top 90%",
+						toggleActions: 'play none none reverse',
+					},
+					x: 0,
+                    filter: "blur(0px)",
+					opacity: 1,
+					duration: 1,
+
+					ease: "ease1",
+					stagger: 0.04,
+					delay: delayValue, 
+				});
+			});
+		}
 	}	
 
 
@@ -405,6 +493,69 @@ if ($('.sr-hero-1-cursor-shape').length) {
     $bsH1area.on('mousemove', bsH1moveCircle);
 }
 
+/* 
+	workflow-add-class
+*/
+// gsap.to(".sr-workflow-1-wrap", {
+// 	scrollTrigger: {
+// 		trigger: ".sr-workflow-1-wrap",
+// 		start: "top 70%",
+// 		end: "bottom bottom",
+// 		toggleActions: "play none none reverse",
+// 		toggleClass: "active",
+// 		once: true,
+// 		markers: true,
+// 	}
+// });
+
+
+/* 
+    faqs-1-sticky
+*/
+if ($(".sr-faqs-1-content-pin").length) { 
+	if (window.matchMedia("(min-width: 992px)").matches) { 
+
+		gsap.to(".sr-faqs-1-content-pin", {
+			scrollTrigger: {
+				trigger: ".sr-faqs-1-wrap",
+				start: "top 20%", 
+				end: () => {
+					const rightHeight = document.querySelector(".sr-faqs-1-accordion").offsetHeight;
+					const leftHeight = document.querySelector(".sr-faqs-1-content").offsetHeight;
+					return "+=" + (rightHeight - leftHeight);  
+				},
+				pin: ".sr-faqs-1-content-pin", 
+				pinSpacing: false,
+				markers: false
+			}
+		});
+	}
+}
+
+
+/* 
+    blog-1-sticky
+*/
+if ($(".sr-blog-1-content-pin").length) { 
+	if (window.matchMedia("(min-width: 992px)").matches) { 
+
+		gsap.to(".sr-blog-1-content-pin", {
+			scrollTrigger: {
+				trigger: ".sr-blog-1-wrap",
+				start: "top 20%", 
+				end: () => {
+					const rightHeight = document.querySelector(".sr-blog-1-right").offsetHeight;
+					const leftHeight = document.querySelector(".sr-blog-1-content").offsetHeight;
+					return "+=" + (rightHeight - leftHeight);  
+				},
+				pin: ".sr-blog-1-content-pin", 
+				pinSpacing: false,
+				markers: false
+			}
+		});
+	}
+}
+
 
 
 /* 
@@ -484,6 +635,19 @@ $('.wa_marquee_left').marquee({
 	direction: 'left',
 	duplicated: true,
 	pauseOnHover: true,
+})
+
+/* 
+    marquee-left-nopause
+*/
+$('.wa_marquee_left_nopause').marquee({
+	speed: 50,
+	gap: 0,
+	delayBeforeStart: 0,
+	startVisible:true,
+	direction: 'left',
+	duplicated: true,
+	pauseOnHover: false,
 })
 
 

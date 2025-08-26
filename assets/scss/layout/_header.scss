@@ -22,6 +22,7 @@
         background-color: rgb(173 173 173 / 20%);
         border-radius: 12px;
         padding: 0 15px;
+        transition: all .5s var(--sr-cube-1);
 
         @media #{$lg,$md,$xs} {
             padding: 15px 15px; 
@@ -207,9 +208,15 @@
         }
     }
   
-    &:is(.pg-header-2-area) {
+    &:is(.sr-header-1-area) {
+        top: 24px;
         &:is(.wa_sticky_show) {
-            background-color: #000;
+            // background-color: #000;
+
+            .sr-header-1-wrap {
+                background-color: #fff;
+                box-shadow: 1px 10px 11px rgb(0 0 0 / 4%);
+            }
         }
     }  
 

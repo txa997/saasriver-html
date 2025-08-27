@@ -641,11 +641,25 @@ $('.wa_marquee_left').marquee({
     marquee-left-nopause
 */
 $('.wa_marquee_left_nopause').marquee({
-	speed: 50,
+	speed: 20,
 	gap: 0,
 	delayBeforeStart: 0,
 	startVisible:true,
 	direction: 'left',
+	duplicated: true,
+	pauseOnHover: false,
+})
+
+
+/* 
+    marquee-right-nopause
+*/
+$('.wa_marquee_right_nopause').marquee({
+	speed: 20,
+	gap: 0,
+	delayBeforeStart: 0,
+	startVisible:true,
+	direction: 'right',
 	duplicated: true,
 	pauseOnHover: false,
 })
@@ -881,12 +895,14 @@ $("[data-background]").each(function(){
 /* 
 	counter-activation
 */
-$('.counter').counterUp({
-	delay: 10,
-	time: 5000
-});
 
-if($(".wa-counter").length) {
+
+if($(".counter").length) {
+    $('.counter').counterUp({
+        delay: 10,
+        time: 5000
+    });
+
     let elements = document.querySelectorAll(".wa-counter");
 
     elements.forEach(element => {
@@ -895,6 +911,16 @@ if($(".wa-counter").length) {
     });
 }
 
+/*
+    odomater-activation
+*/
+$('.odometer').appear(function (e) {
+	var odo = $(".odometer");
+	odo.each(function () {
+		var countNumber = $(this).attr("data-count");
+		jQuery(this).html(countNumber);
+	});
+});
 
 /* 
 	current-year-function

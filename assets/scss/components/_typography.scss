@@ -101,6 +101,34 @@
     }
 }
 
+.sr-sec-title-2 {
+    font-family: var(--sr-font-1);
+    font-weight: 600;
+    color: #fff;
+    font-size: 40px;
+    line-height: 120%;
+    margin-bottom: 0;
+    opacity: .9;
+
+    span {
+        display: inline;
+        color: rgba(213, 215, 218, 0.70);
+    }
+
+    @media #{$lg} {
+        font-size: 38px;
+    }
+    @media #{$md} {
+        font-size: 35px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 33px;
+    }
+}
+
 /* 
     typography-end
 */

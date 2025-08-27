@@ -141,3 +141,64 @@
 /* 
     services-1-end
 */
+/* 
+    services-2-start
+*/
+.sr-services-2 {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    &-tags {
+        &::after {
+            content: "";
+            width: 300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background: linear-gradient(90deg,#0B0D0C 0%, rgba(0, 90, 255, 0) 100%);
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                width: 100px;
+            }
+        }
+        &::before {
+            content: "";
+            width: 300px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(1700deg,#0B0D0C 0%, rgba(0, 90, 255, 0) 100%);
+            z-index: 1;
+
+            @media #{$md,$xs} {
+                width: 100px;
+            }
+        }
+
+        &-wrap {
+            display: flex;
+            gap: 24px;
+            margin-right: 24px;
+
+            
+        }
+        &-single {
+            flex: 0 0 auto;
+            border-radius: 100px;
+            border: 1px solid rgba(213, 215, 218, 0.05);
+            background: linear-gradient(107deg, rgba(255, 255, 255, 0.01) 5.84%, rgba(255, 255, 255, 0.02) 70.7%);
+            background-blend-mode: overlay;
+            backdrop-filter: blur(3px);
+            padding: 11px 23px;
+        }
+    }
+}
+/* 
+    services-2-end
+*/

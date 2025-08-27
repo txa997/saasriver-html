@@ -1,0 +1,69 @@
+/* 
+    counter-2-start
+*/
+.sr-counter-2 {
+    &-wrap {
+        background: linear-gradient(106.97deg, rgba(255, 255, 255, 0.04) 5.84%, rgba(255, 255, 255, 0.01) 70.7%);
+        background-blend-mode: overlay;
+        backdrop-filter: blur(3px);
+        border-radius: 12px;
+        padding: 48px 48px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+    }
+
+    &-sec-title {
+        .sec-disc {
+            max-width: 500px;
+            margin-top: 12px;
+            margin-bottom: 40px;
+        }
+    }
+
+    &-right {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        height: 44px;
+    }
+
+    &-item {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        .number {
+            color: #fff;
+            font-weight: 400;
+            margin-bottom: 0;
+            letter-spacing: -2px;
+            line-height: 80%;
+            text-align: right;
+            font-family: var(--sr-font-2);
+            font-size: 72px;
+            text-transform: uppercase;
+
+            .odometer-formatting-mark {
+                display: none;
+            }
+            * {
+                font-family: inherit;
+                line-height: inherit;
+                font-weight: inherit;
+                font-size: inherit;
+            }
+        }
+
+        .disc {
+            border-top: 2px solid rgb(84 89 99 / 10%);
+            padding-top: 12px;
+            color: #fff;
+        }
+    }
+}
+
+
+/* 
+    counter-2-end
+*/

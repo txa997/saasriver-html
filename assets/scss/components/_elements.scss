@@ -35,7 +35,44 @@
     }
 }
 
+.sr-gd-bg-rotated {
+    overflow: hidden;
+    position: relative;
+    z-index: 1;
 
+    
+    &::before {
+        content: "";
+        width: calc(100% - 2px);
+        height: calc(100% - 2px);
+        position: absolute;
+        left: 1px;
+        top: 1px;
+        background: #101010;
+        z-index: -1;
+    }
+
+    &::after {
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        background: linear-gradient(45deg, rgba(0, 0, 0, 0) 20%, rgb(255, 66, 0) 50%, rgba(0, 0, 0, 0) 80%);
+        z-index: -2;
+        animation: sr-gd-bg-rotated 10s linear infinite;
+    }
+}
+
+@keyframes sr-gd-bg-rotated {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 /* 
     elements-end
 */

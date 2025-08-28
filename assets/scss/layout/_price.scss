@@ -209,6 +209,10 @@
         justify-content: space-between;
         gap: 40px;
 
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
         .left {
             max-width: 486px;
         }
@@ -256,6 +260,10 @@
         display: grid;
         grid-template-columns: 1.42fr 1fr;
         gap: 24px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
     }
 
     &-package {
@@ -271,12 +279,20 @@
             background-blend-mode: overlay;
             display: flex;
             justify-content: space-between;
+            gap: 20px;
             padding: 40px 40px;
             align-items: center;
             transition: all .5s var(--sr-cube-1);
 
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 20px;
+            }
+
             .title {
                 font-weight: 24px;
+                @media #{$xl,$lg,$md,$xs} {
+                    font-size: 22px;
+                }
             }
             .disc {
                 margin-top: 12px;
@@ -291,11 +307,18 @@
                 font-weight: 700;
                 letter-spacing: -2px;
                 line-height: 100%;
+                @media #{$xl,$lg,$md,$xs} {
+                    font-size: 35px;
+                }
             }
 
             .per-month {
                 font-size: 16px;
                 margin-top: 8px;
+            }
+
+            &:hover {
+                border-color: var(--sr-clr-pr-2);
             }
 
         }
@@ -317,7 +340,7 @@
     &-features {
         border-radius: 12px;
         border: 1px solid rgb(213 215 218 / 5%);
-        background: linear-gradient(93deg, rgba(255, 255, 255, 0.01) 0%, rgba(255, 255, 255, 0.01) 100%);
+        background: linear-gradient(93deg, rgba(255, 255, 255, 0.02) 0%, rgba(255, 255, 255, 0.01) 100%);
         background-blend-mode: overlay;
         padding: 40px 40px;
         display: flex;
@@ -326,8 +349,16 @@
         height: 100%;
         gap: 30px;
 
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 40px 20px;
+        }
+
         .title {
             font-size: 24px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
         }
 
         .features-list {

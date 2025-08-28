@@ -7,10 +7,20 @@
         background-blend-mode: overlay;
         backdrop-filter: blur(3px);
         border-radius: 12px;
-        padding: 48px 48px;
+        padding: 80px 80px;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 40px;
+
+        @media #{$xl,$lg} {
+            padding: 80px 20px;
+        }
+
+        
+        @media #{$md,$xs} {
+            padding: 80px 20px;
+            grid-template-columns: 1fr;
+        }
     }
 
     &-sec-title {
@@ -25,7 +35,13 @@
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 80px;
-        height: 44px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr ;
+        }
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
     }
 
     &-item {
@@ -42,7 +58,6 @@
             text-align: right;
             font-family: var(--sr-font-2);
             font-size: 72px;
-            text-transform: uppercase;
 
             .odometer-formatting-mark {
                 display: none;
@@ -52,7 +67,21 @@
                 line-height: inherit;
                 font-weight: inherit;
                 font-size: inherit;
+          
             }
+            .odometer {
+                transform: translateY(-2px);
+            }
+
+            &:is(.has-stroke) {
+                -webkit-text-stroke: 1px #fff;
+                -webkit-text-fill-color: transparent;
+            }
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 52px;
+            }
+   
         }
 
         .disc {

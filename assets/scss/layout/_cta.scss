@@ -104,6 +104,33 @@
     
 
 }
+
 /* 
     cta-1-end
+*/
+/* 
+    cta-2-start
+*/
+.sr-cta-2 {
+    &-wrap {
+        max-width: 636px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sr-cta-1-form-input {
+            border-radius: 8px;
+            border: 1px solid rgba(213, 215, 218, 0.10);
+            background: rgba(55, 55, 55, 0.10);
+            color: var(--sr-clr-black-6);
+        }
+    }
+    &-sec-title {
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+}
+/* 
+    cta-2-end
 */

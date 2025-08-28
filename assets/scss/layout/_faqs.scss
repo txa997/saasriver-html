@@ -122,3 +122,82 @@
 /* 
     faqs-1-end
 */
+/* 
+    faqs-2-start
+*/
+.sr-faqs-2 {
+    &-sec-title {
+        .sec-disc {
+            margin-top: 12px;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-max-width {
+        max-width: 856px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-accordion {
+        border-radius: 20px;
+        border: 1px solid rgb(213 215 218 / 5%);
+        background: linear-gradient(107deg, rgba(255, 255, 255, 0.04) 5.84%, rgba(255, 255, 255, 0.01) 70.7%);
+        background-blend-mode: overlay;
+        padding: 8px;
+
+        .sr-accordion {
+            gap: 4px;
+
+            &-item {
+                border-radius: 12px;
+                background: rgba(255, 255, 255, 0.02);
+
+
+                .item-title {
+                    .icon-2 {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        border: 1px solid rgba(31, 31, 31, 0.60);
+                        color: var(--sr-clr-black-4);
+                        flex:  0 0 auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+
+                        i {
+                            transition: all .5s var(--sr-cube-1);
+                        }
+                    }
+
+
+                    &:is(:not(.collapsed)) {
+                        .icon-2 {
+                            transform: rotate(90deg);
+                        }
+        
+                    }
+        
+                    &:is(.collapsed) {
+                        &:hover {
+                            color: var(--sr-clr-pr-2);
+                        }
+                    }
+                }
+
+                .item-disc {
+                    opacity: .8;
+                    padding: 22px 24px;
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+}
+/* 
+    faqs-2-end
+*/

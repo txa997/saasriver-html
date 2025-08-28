@@ -183,7 +183,7 @@
 */
 .has-hero-2 {
     &:is(.sr-hero-1-member) {
-        background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.1) 100%);
+        background: linear-gradient(108deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.06) 100%);
         background-blend-mode: overlay;
         border-color: transparent;
 
@@ -212,6 +212,22 @@
             b {
                 font-weight: 800;
             }
+
+            @media #{$xl} {
+                font-size: 55px;
+            }
+            @media #{$lg} {
+                font-size: 50px;
+            }
+            @media #{$md} {
+                font-size: 45px;
+            }
+            @media #{$xs} {
+                font-size: 35px;
+            }
+            @media #{$sm} {
+                font-size: 40px;
+            }
         }
     }
 }
@@ -223,19 +239,43 @@
         justify-content: space-between;
         align-items: center;
         margin-top: 52px;
+
+        @media #{$xs} {
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        @media #{$sm} {
+            flex-wrap: nowrap;
+            gap: 0px;
+        }
         
         .left {
             display: flex;
             flex-direction: column;
             gap: 150px;
             align-items: start;
+
+            @media #{$lg} {
+                gap: 93px;
+            }
+
+            @media #{$md,$xs} {
+                gap: 40px;
+            }
+
+            .sr-hero-2-apps-logo {
+                &:nth-child(2) {
+                    margin-left: 15px;
+                }
+            }
         }
 
         
         &-logo {
             display: inline-flex;
             align-items: center;
-            background: linear-gradient(107.68deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.1) 100%);
+            background: linear-gradient(104deg, rgba(255, 255, 255, 0.02) 6.73%, rgba(255, 255, 255, 0.05) 93.48%);
             background-blend-mode: overlay;
             border-radius: 120px;
             gap: 12px;
@@ -270,8 +310,7 @@
             position: relative;
             /* z-index: 1; */
         
-            &::after {
-                content: "";
+            &-shadow {
                 width: 100%;
                 height: 100%;
                 background: var(--sr-clr-gd-1);
@@ -281,8 +320,7 @@
                 position: absolute;
                 top: 0;
                 left: 0;
-                transform: scale(1.2);
-                opacity: .15;
+                transform: scale(1);
             }
              
         }
@@ -293,9 +331,23 @@
             gap: 150px;
             align-items: end;
 
+            @media #{$lg} {
+                gap: 93px;
+            }
+
+            @media #{$md,$xs} {
+                gap: 40px;
+            }
+
             .sr-hero-2-apps-logo {
                 padding: 8px;
                 padding-left: 20px;
+            }
+
+            .sr-hero-2-apps-logo {
+                &:nth-child(2) {
+                    margin-right: 15px;
+                }
             }
         }
 
@@ -306,6 +358,10 @@
             left: 32%;
             transform: translate(-50%, -50%);
             z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
         }
         
         
@@ -316,6 +372,10 @@
             right: -6%;
             transform: translate(-50%, -50%) scaleX(-1);
             z-index: -1;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
         }
     }
 }

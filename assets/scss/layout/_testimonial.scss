@@ -114,6 +114,107 @@
     
 
 }
+
+
 /* 
     testimonial-1-end
+*/
+/* 
+    testimonial-2-start
+*/
+.sr-testimonial-2 {
+    &-sec-title {
+        .sr-sec-title-2 {
+            max-width: 530px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .sec-disc {
+            margin-top: 12px;
+            opacity: .9;
+        }
+    }
+    &-item {
+        border-radius: 16px;
+        border: 1px solid rgb(213 215 218 / 5%);
+        background: linear-gradient(107deg, rgba(255, 255, 255, 0.04) 5.84%, rgba(255, 255, 255, 0.01) 70.7%);
+        background-blend-mode: overlay;
+        padding: 12px;
+        padding-right: 0;
+        display: grid;
+        grid-template-columns: 1fr 1.74fr;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+        
+        @media #{$sm} {
+            grid-template-columns: 1fr 1.74fr;
+        }
+
+        .left {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 24px;
+            border-radius: 12px;
+            background-color: #171918;
+            padding: 36px 10px;
+        }
+
+        .author-img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 45px;
+            padding: 20px 35px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 20px 20px;
+            }
+        }
+
+        .logo-x-quote {
+            display: flex;
+            justify-content: space-between;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+        .quote {
+            opacity: 4%;
+        }
+
+        .sr-rating-1 {
+            gap: 5px;
+            color: var(--sr-clr-pr-2);
+        }
+
+        .author-name {
+            font-weight: 500;
+            font-size: 20px;
+        }
+    }
+
+    &-slider-pagi {
+        &:is(.sr-testimonial-1-slider-btn) {
+            span {
+                background: var(--sr-clr-gd-1);
+            }
+        }
+    }
+}
+
+
+
+
+/* 
+    testimonial-2-end
 */

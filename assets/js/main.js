@@ -204,7 +204,13 @@ function initAfterPreloader() {
 	CustomEase.create("ease1", "0.23, 1, 0.32, 1");
 
 
-
+    gsap.to(".sr-hero-2-apps-big-logo-shadow",{
+        duration: 1,
+        repeat: -1,
+        repeatDelay: 3,
+        scale: 1.5,
+        opacity: 0,
+    })
 	/* 
 		only-LTR-direction
 	*/
@@ -300,6 +306,20 @@ function initAfterPreloader() {
 
 
     
+
+
+
+/* 
+	after-preloader-end
+*/
+}
+
+
+/* 
+	after-page-load-start
+*/
+function afterPageLoad() {
+
     /* 
         hero-2-svg-animation
     */
@@ -347,26 +367,6 @@ function initAfterPreloader() {
         }
     });
 
-    gsap.to(".sr-hero-2-apps-big-logo-shadow",{
-        duration: 1,
-        repeat: -1,
-        repeatDelay: 3,
-        scale: 1.5,
-        opacity: 0,
-    })
-
-
-
-/* 
-	after-preloader-end
-*/
-}
-
-
-/* 
-	after-page-load-start
-*/
-function afterPageLoad() {
 
 
 

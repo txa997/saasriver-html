@@ -426,6 +426,9 @@ gsap.utils.toArray('.subtitle_1_icon').forEach((item) => {
     }
 );
 
+
+
+
 /* 
     subtitle-1-text
 */	

@@ -149,14 +149,29 @@
         .title {
             font-size: 24px;
             margin-top: 32px;
+            transition: all .5s var(--sr-cube-1);
+
+            &:hover {
+                color: var(--sr-clr-pr-2);
+            }
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 22px;
             }
+
+
         }
         .disc {
             opacity: .9;
             margin-top: 12px;
+        }
+
+        &:hover {
+            .icon {
+                i,img {
+                    animation: pulse 1s;
+                }
+            }
         }
 
         &:nth-child(2) {
@@ -170,6 +185,27 @@
             .icon {
                 &::after {
                     animation-delay: 4s;
+                }
+            }
+        }
+        &:nth-child(4) {
+            .icon {
+                &::after {
+                    animation-delay: 3s;
+                }
+            }
+        }
+        &:nth-child(5) {
+            .icon {
+                &::after {
+                    animation-delay: 2s;
+                }
+            }
+        }
+        &:nth-child(6) {
+            .icon {
+                &::after {
+                    animation-delay: 2.8s;
                 }
             }
         }

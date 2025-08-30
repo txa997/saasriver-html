@@ -238,6 +238,11 @@
         .title {
             font-size: 24px;
             margin-bottom: 10px;
+            transition: .5s var(--sr-cube-1);
+
+            &:hover {
+                color: var(--sr-clr-pr-2);
+            }
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 22px;

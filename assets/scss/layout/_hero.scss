@@ -385,3 +385,181 @@
 /* 
     hero-2-end
 */
+/* 
+    hero-3-start
+*/
+.sr-hero-3 {
+    
+    &-bg-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 1060px;
+        border-radius: 12px;
+        z-index: -2;
+
+        @media #{$md} {
+            height: 860px;
+        }
+        @media #{$xs} {
+            height: 90%;
+        }
+        @media #{$sm} {
+            height: 760px;
+        }
+    }
+
+    &-area {
+        margin: 12px;
+        padding-top: 212px;
+
+        @media #{$md,$xs} {
+            padding-top: 150px;
+        }
+
+        .sr-hero-1 {
+            &-content {
+                max-width: 1015px;
+
+                .hero-title {
+                    font-size: 68px;
+                    line-height: 110%;
+                    color: #fff;
+
+                    b {
+                        font-weight: 800;
+                    }
+
+                    @media #{$xxl} {
+                        font-size: 60px;
+                    }
+                    @media #{$xl} {
+                        font-size: 55px;
+                    }
+                    @media #{$lg} {
+                        font-size: 50px;
+                    }
+                    @media #{$md} {
+                        font-size: 45px;
+                    }
+                    @media #{$xs} {
+                        font-size: 35px;
+                    }
+                    @media #{$sm} {
+                        font-size: 40px;
+                    }
+                }
+
+                .hero-disc {
+                    color: #fff;
+                    max-width: 520px;
+                    margin-left: auto;
+                    margin-right: auto;
+                }
+
+                .hero-btn {
+                    align-items: center;
+                    gap: 20px;
+                }
+
+                .hero-3-btn {
+                    font-weight: 500;
+                    color: #fff;
+                    position: relative;
+                    z-index: 1;
+                    line-height: 1.2;
+
+                    &::after {
+                        content: "";
+                        width: 100%;
+                        height: 1px;
+                        background: #fff;
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        transition: all .5s var(--sr-cube-1);
+                        transform-origin: left;
+                        transform: scaleX(0);
+                    }
+
+                    &:hover {
+                        &::after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                .sr-pr-btn-1 {
+                    background: #fff;
+                    color: var(--sr-clr-black-3);
+                    .icon {
+                        background: var(--sr-clr-pr-1);
+                        color: #fff;
+                    }
+                }
+            }
+
+            &-brand-logo {
+                border-radius: 12px;
+
+                &:is(.logo-1) {
+                    left: -10%;
+                    top: 7%;
+
+                    @media #{$xxl,$xl,$lg} {
+                        left: 0;
+                    }
+                }
+                &:is(.logo-2) {
+                    left: 11%;
+                    top: 24%;
+                }
+                &:is(.logo-3) {
+                    right: -9%;
+                    top: 7%;
+                    left: unset;
+
+                    @media #{$xxl,$xl,$lg} {
+                        right: 0;
+                    }
+                }
+                &:is(.logo-4) {
+                    right: 9%;
+                    top: 25%;
+
+                }
+            }
+        }
+
+    }
+
+
+    &-list {
+        display: flex;
+        justify-content: center;
+        gap: 15px 20px;
+        margin-top: 48px;
+        flex-wrap: wrap;
+
+        li {
+            color: #fff;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+
+            i {
+                font-size: 16px;
+            }
+        }
+    }
+
+    &-img {
+        border-radius: 12px;
+    }
+    
+
+}
+/* 
+    hero-3-end
+*/

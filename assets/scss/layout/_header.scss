@@ -254,6 +254,23 @@
     header-2-end
 */
 
+/* 
+    header-3-start
+*/
+.has-header-3 {
+    &:is(.sr-header-1-area) {
+        .sr-header-1-wrap {
+            margin: 0px 24px;
+            background: #fff;
+        }
+    }
+}
+ 
+
+/* 
+    header-3-end
+*/
+
 
 
 

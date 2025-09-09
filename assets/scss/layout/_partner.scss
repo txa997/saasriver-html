@@ -106,6 +106,24 @@
         }
     }
 }
+
+
 /* 
     partner-2-end
+*/
+/* 
+    partner-3-start
+*/
+.sr-partner-3-area {
+    .sr-partner-1-marquee {
+        &::after {
+            background: linear-gradient(90deg, rgb(248 249 252) 0%, rgba(0, 90, 255, 0) 100%);
+        }
+        &::before {
+            background: linear-gradient(270deg, rgb(248 249 252) 0%, rgba(0, 90, 255, 0) 100%);
+        }
+    }
+}
+/* 
+    partner-3-end
 */

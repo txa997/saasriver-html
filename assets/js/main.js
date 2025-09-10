@@ -622,7 +622,51 @@ if ($(".sr-blog-1-content-pin").length) {
 }
 
 
+/* 
+	features-3-svg-1
+*/
+var features3svg1 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sr-features-3-svg-1",
+		toggleActions: "play none none reverse",
+		start: "top 90%",
+		markers: false,
+	}
+})
 
+features3svg1.from(".sr-features-3-svg-1 .has-ani", {
+	opacity: 0,
+	duration: .4,
+	stagger: 0.4,
+
+})
+
+/* 
+	customer-3
+*/
+
+// let customer3item = document.querySelectorAll(".author-img");
+  const items = gsap.utils.toArray(".author-img");
+
+  function playRandomSequence() {
+    const shuffled = gsap.utils.shuffle(items);
+
+    const tl = gsap.timeline({
+      onComplete: playRandomSequence, 
+      defaults: { ease: "power2.inOut" }
+    });
+
+    shuffled.forEach(item => {
+      tl.fromTo(item,
+        { scale: 1 },
+        { scale: 1.2, duration: 0.2 }
+      ).to(item,
+        { scale: 1, duration: 0.2 }
+      );
+    });
+  }
+
+  playRandomSequence();
 
 /* 
 	testimonial-1-slider-function
@@ -1026,13 +1070,13 @@ if($(".counter").length) {
 /*
     odomater-activation
 */
-$('.odometer').appear(function (e) {
-	var odo = $(".odometer");
-	odo.each(function () {
-		var countNumber = $(this).attr("data-count");
-		jQuery(this).html(countNumber);
-	});
+
+$('.odometer').appear(function () {
+    var $this = $(this); 
+    var countNumber = $this.attr("data-count");
+    $this.html(countNumber);
 });
+
 
 /* 
 	current-year-function

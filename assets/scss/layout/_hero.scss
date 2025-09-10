@@ -554,12 +554,36 @@
         }
     }
 
+    &-img-wrap {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
     &-img {
         border-radius: 12px;
+        transform: rotateX(40deg);
+        transition: all 1s var(--sr-cube-1);
+        &:is(.active) {
+            transform: rotateX(0deg);
+            transition-delay: 1.5s;
+        }
     }
     
 
 }
+
+.sr-features-3-svg-1 path {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 3s linear infinite forwards;
+}
+
+@keyframes draw {
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
 /* 
     hero-3-end
 */

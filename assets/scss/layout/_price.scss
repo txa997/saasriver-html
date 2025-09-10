@@ -430,6 +430,128 @@
         }
     }
 }
+
+
 /* 
     price-2-end
+*/
+/* 
+    price-3-start
+*/
+.sr-price-3 {
+    &-wrap {
+        display: grid;
+        gap: 24px;
+        grid-template-columns: 1fr 2fr;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr ;
+        }
+    }
+
+    &-content {
+        .sec-disc {
+            margin-top: 12px;
+        }
+
+        .btn-wrap {
+            margin-top: 40px;
+        }
+    }
+
+    &-tabs {
+        &-btn {
+            display: flex;
+            gap: 12px;
+            margin-top: 24px;
+
+            .nav-link {
+                font-size: 18px;
+                background: transparent;
+                font-weight: 500;
+                display: flex;
+                gap: 12px;
+                align-items: center;
+
+                .button-toggle {
+                    width: 50px;
+                    height: 28px;
+                    border: 1px solid rgb(46 48 51 / 12%);
+                    border-radius: 32px;
+                    position: relative;
+                    z-index: 1;
+                    flex: 0 0 auto;
+
+                    &::after {
+                        content: "";
+                        width: 20px;
+                        height: 20px;
+                        position: absolute;
+                        top: 3px;
+                        left: 5px;
+                        background: var(--sr-clr-sd-1);
+                        border-radius: 50%;
+                        transition: all .5s var(--sr-cube-1);
+                    }
+                }
+
+                &:not(.active) {
+                    color: rgb(8 8 10 / 60%);
+                    .button-toggle {
+                        &::after {
+                            left: 23px;
+                        }
+                    }
+
+                    &:hover {
+                        color: var(--sr-clr-pr-1);
+                    }
+                }
+            }
+        }
+    }
+
+    &-table {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr; 
+        }
+
+
+        .sr-price-1-card {
+            background: #fff;
+            padding: 40px 40px;
+            border: none;
+
+            @media #{$xl,$lg,$md,$xs} {
+                padding: 40px 20px;
+            }
+
+            .limited {
+                display: inline-block;
+                border-radius: 100px;
+            }
+
+            .package-btn {
+                margin-top: 24px;
+            }
+
+            .card-line {
+                background: rgb(0 0 0 / 5%);
+                margin-top: 24px;
+            }
+
+            .package-features {
+                padding: 0;
+                margin-top: 40px;
+            }
+        }
+    }
+    
+}
+/* 
+    price-3-end
 */

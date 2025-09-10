@@ -218,3 +218,100 @@
 /* 
     testimonial-2-end
 */
+/* 
+    testimonial-3-start
+*/
+.sr-testimonial-3 {
+    &-sec-title {
+        .sec-disc {
+            max-width: 480px;
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 12px;
+        }
+    }
+
+    &-stories {
+        max-width: 1076px;
+        display: grid;
+        grid-template-columns: 1.07fr 1fr;
+        margin-left: auto;
+        margin-right: auto;
+        gap: 60px;
+        align-items: center;
+
+        @media #{$md} {
+            gap: 40px;
+        }
+
+        @media #{$xs} {
+            gap: 40px;
+            grid-template-columns: 1fr;
+        }
+
+        .main-img {
+            height: 360px;
+            border-radius: 24px;
+        }
+        .comment {
+            font-size: 24px;
+            font-weight: 500;
+            margin-bottom: 24px;
+
+            @media #{$md,$xs} {
+                font-size: 20px;
+            }
+        }
+        
+        .author-name {
+            font-size: 20px;
+            margin-bottom: 4px;
+        }
+
+        .author-dg {
+            margin-bottom: 40px;
+        }
+    }
+
+    &-item {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        .sr-testimonial-1-item {
+            background-color: transparent;
+            text-align: center;
+            padding: 32px 32px;
+            transition: all .5s var(--sr-cube-1);
+            border: none;
+
+
+            .sr-rating-1 {
+                justify-content: center;
+                color: var(--sr-clr-pr-2);
+                font-size: 18px;
+            }
+
+            .comment {
+                margin-top: 24px;
+            }
+            
+            .author {
+                text-align: left;
+                padding: 0;
+
+                .author-social {
+                    margin-left: auto;
+                }
+            }
+
+            &:hover {
+                background-color: #fff;
+            }
+        }
+    }
+}
+
+/* 
+    testimonial-3-end
+*/

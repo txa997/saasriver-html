@@ -271,6 +271,127 @@
     header-3-end
 */
 
+/* 
+    header-4-start
+*/
+.sr-header-4 {
+    &-area {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 3;
+    }
+
+    &-top {
+        background-color: #fff;
+        padding: 10px 40px;
+
+        &-wrap {
+            display: flex;
+            gap: 40px;
+        }
+
+        &-item {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 14px;
+            color: var(--sr-clr-black-8);
+        }
+    }
+
+    &-wrap {
+        padding: 0 40px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 70px;
+    }
+
+
+    &-action-link {
+        margin-left: auto;
+    }
+}
+
+.sr-main-navigation {
+    &:is(.has-header-4) {
+        .navbar-nav {
+            gap: 0 60px;
+            li {
+                position: relative;
+                &:not(:last-child) {
+                    &::after {
+                        content: "-";
+                        position: absolute;
+                        top: 47%;
+                        right: -30px;
+                        font-family: var(--sr-font-3);
+                        font-weight: 500;
+                        font-size: 19px;
+                        color: #0e1421;
+                        line-height: 1;
+                        transform: translateY(-50%);
+                        z-index: 1;
+                    }
+                }
+
+                a {
+                    font-family: var(--sr-font-3);
+                    font-weight: 500;
+                    font-size: 19px;
+                    color: #0e1421;
+                    padding: 43px 0;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: 45px;
+                        right: 0;
+                        z-index: 1;
+                        height: 2px;
+                        width: 100%;
+                        background: #0e1421;
+                        transform-origin: left;
+                        transition: all .5s var(--sr-cube-1);
+                        transform: scaleX(0);
+                    }
+                }
+
+                &:hover {
+                    > a {
+                        &::after {
+                            transform: scaleX(1);
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    background-color: #fff;
+                    border-radius: 0;
+                    border: none;
+
+                    li {
+                        a {
+                            font-size: 16px;
+                        }
+
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 
+    header-4-end
+*/
+
 
 
 

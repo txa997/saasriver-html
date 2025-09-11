@@ -23,6 +23,25 @@
     margin-bottom: 0;
 }
 
+.sr-p-3 {
+    font-family: var(--sr-font-1);
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: 400;
+    color: var(--sr-clr-black-9);
+    margin-bottom: 0;
+}
+
+
+.sr-p-4 {
+    font-family: var(--sr-font-1);
+    line-height: 1.444;
+    font-size: 18px;
+    font-weight: 400;
+    color: var(--sr-clr-black-9);
+    margin-bottom: 0;
+}
+
 
 .sr-h-1 {
     font-family: var(--sr-font-1);
@@ -38,6 +57,14 @@
     line-height: 130%;
     font-weight: 600;
     color: #fff;
+    margin-bottom: 0;
+}
+
+.sr-h-3 {
+    font-family: var(--sr-font-3);
+    line-height: 1.25;
+    font-weight: 700;
+    color: var(--sr-clr-black-8);
     margin-bottom: 0;
 }
 

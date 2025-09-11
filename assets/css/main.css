@@ -68,19 +68,25 @@ CSS INDEX
 */
 @import url("https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Squada+One&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,200..800&display=swap");
 :root {
   scroll-behavior: inherit;
   --sr-font-1: "Urbanist", sans-serif;
   --sr-font-2: "Squada One", sans-serif;
+  --sr-font-3: "Bricolage Grotesque", sans-serif;
   --sr-clr-pr-1: #7A5AF8;
   --sr-clr-pr-2: #FF4200;
+  --sr-clr-pr-3: #009393;
   --sr-clr-sd-1: #4F4AE6;
   --sr-clr-black-3: #08080A;
   --sr-clr-black-4: #545963;
   --sr-clr-black-5: #181D27;
   --sr-clr-black-6: #D5D7DA;
   --sr-clr-black-7: #F8F9FC;
+  --sr-clr-black-8: #0f1d37;
+  --sr-clr-black-9: #404040;
   --sr-clr-gd-1: linear-gradient(180deg, #FF7800 0%, #FF4200 100%);
+  --sr-clr-gd-2: linear-gradient( 90deg, rgb(0,147,147) 0%, rgb(1,221,221) 100%);
   --sr-cube-1: cubic-bezier(0.23, 1, 0.32, 1);
 }
 
@@ -1089,6 +1095,11 @@ input:focus::placeholder, textarea:focus::placeholder {
     max-width: 1320px;
   }
 }
+@media (min-width: 1600px) {
+  .container.sr-container-2 {
+    max-width: 1524px;
+  }
+}
 /* 
     custom-container-end
 */
@@ -1116,6 +1127,24 @@ input:focus::placeholder, textarea:focus::placeholder {
   margin-bottom: 0;
 }
 
+.sr-p-3 {
+  font-family: var(--sr-font-1);
+  line-height: 1.5;
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--sr-clr-black-9);
+  margin-bottom: 0;
+}
+
+.sr-p-4 {
+  font-family: var(--sr-font-1);
+  line-height: 1.444;
+  font-size: 18px;
+  font-weight: 400;
+  color: var(--sr-clr-black-9);
+  margin-bottom: 0;
+}
+
 .sr-h-1 {
   font-family: var(--sr-font-1);
   line-height: 130%;
@@ -1129,6 +1158,14 @@ input:focus::placeholder, textarea:focus::placeholder {
   line-height: 130%;
   font-weight: 600;
   color: #fff;
+  margin-bottom: 0;
+}
+
+.sr-h-3 {
+  font-family: var(--sr-font-3);
+  line-height: 1.25;
+  font-weight: 700;
+  color: var(--sr-clr-black-8);
   margin-bottom: 0;
 }
 
@@ -2449,6 +2486,96 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 /* 
     header-3-end
+*/
+/* 
+    header-4-start
+*/
+.sr-header-4-area {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 3;
+}
+.sr-header-4-top {
+  background-color: #fff;
+  padding: 10px 40px;
+}
+.sr-header-4-top-wrap {
+  display: flex;
+  gap: 40px;
+}
+.sr-header-4-top-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+  color: var(--sr-clr-black-8);
+}
+.sr-header-4-wrap {
+  padding: 0 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+.sr-header-4-action-link {
+  margin-left: auto;
+}
+
+.sr-main-navigation:is(.has-header-4) .navbar-nav {
+  gap: 0 60px;
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li {
+  position: relative;
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li:not(:last-child)::after {
+  content: "-";
+  position: absolute;
+  top: 47%;
+  right: -30px;
+  font-family: var(--sr-font-3);
+  font-weight: 500;
+  font-size: 19px;
+  color: #0e1421;
+  line-height: 1;
+  transform: translateY(-50%);
+  z-index: 1;
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li a {
+  font-family: var(--sr-font-3);
+  font-weight: 500;
+  font-size: 19px;
+  color: #0e1421;
+  padding: 43px 0;
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li a::after {
+  content: "";
+  position: absolute;
+  bottom: 45px;
+  right: 0;
+  z-index: 1;
+  height: 2px;
+  width: 100%;
+  background: #0e1421;
+  transform-origin: left;
+  transition: all 0.5s var(--sr-cube-1);
+  transform: scaleX(0);
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li:hover > a::after {
+  transform: scaleX(1);
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li .dropdown-menu {
+  background-color: #fff;
+  border-radius: 0;
+  border: none;
+}
+.sr-main-navigation:is(.has-header-4) .navbar-nav li .dropdown-menu li a {
+  font-size: 16px;
+}
+
+/* 
+    header-4-end
 */
 /* 
     sticky-header-css-start
@@ -6462,6 +6589,10 @@ input:focus::placeholder, textarea:focus::placeholder {
 
 .sr-home-3 {
   background-color: #F8F9FC;
+}
+
+.sr-home-4 {
+  background-color: #9CE9EC;
 }
 
 /* 

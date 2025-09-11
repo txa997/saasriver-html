@@ -198,6 +198,102 @@
         }
     }
 }
+
+
 /* 
     faqs-2-end
+*/
+/* 
+    faqs-3-start
+*/
+.sr-faqs-3 {
+    &-wrap {
+        padding: 80px 80px;
+        background-color: #fff;
+        border-radius: 24px;
+
+        @media #{$xl,$lg,$md,$xs} {
+            padding: 80px 20px;
+        }
+    }
+
+    &-sec-title {
+        max-width: 660px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            margin-top: 12px;
+        }
+    }
+
+    &-accordion {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+
+        .sr-accordion {
+            gap: 20px;
+
+            &-item {
+                border-radius: 12px;
+                background: var(--sr-clr-black-7);
+
+
+                .item-title {
+                    padding: 15px 16px;
+
+                    .icon-2 {
+                        width: 40px;
+                        height: 40px;
+                        font-size: 16px;
+                        border-radius: 8px;
+                        background: #fff;
+                        color: var(--sr-clr-pr-1);
+                        flex:  0 0 auto;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        transition: all .5s var(--sr-cube-1);
+
+                        i {
+                            transition: all .5s var(--sr-cube-1);
+                        }
+                    }
+
+
+                    &:is(:not(.collapsed)) {
+                        .icon-2 {
+                            color: #fff;
+                            background: var(--sr-clr-pr-1);
+                            i {
+                                transform: rotate(-180deg);
+                            }
+                        }
+        
+                    }
+        
+                    &:is(.collapsed) {
+                        &:hover {
+                            color: var(--sr-clr-pr-1);
+                        }
+                    }
+                }
+
+                .item-disc {
+                    opacity: 1;
+                    padding: 22px 16px;
+                    padding-top: 10px;
+                }
+            }
+        }
+    }
+}
+
+/* 
+    faqs-3-end
 */

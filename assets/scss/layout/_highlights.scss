@@ -47,10 +47,18 @@
     
                 .item-img {
                     border: none;
-                
     
                     img {
                         border-radius: 10px;
+                        transition: all .5s var(--sr-cube-1);
+                    }
+                }
+
+                &:hover {
+                    .item-img {
+                        img {
+                            transform: scale(103%);
+                        }
                     }
                 }
             }
@@ -72,6 +80,15 @@
 
                 img {
                     border-radius: 10px;
+                    transition: all .5s var(--sr-cube-1);
+                }
+            }
+
+            &:hover {
+                .item-img {
+                    img {
+                        transform: scale(103%);
+                    }
                 }
             }
         }

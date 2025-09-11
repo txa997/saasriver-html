@@ -278,12 +278,24 @@
         grid-template-columns: 1fr 1fr 1fr;
         gap: 24px;
 
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+
         .sr-testimonial-1-item {
             background-color: transparent;
             text-align: center;
             padding: 32px 32px;
             transition: all .5s var(--sr-cube-1);
             border: none;
+
+            @media #{$lg,$md,$xs} {
+                padding: 32px 20px;
+            }
 
 
             .sr-rating-1 {

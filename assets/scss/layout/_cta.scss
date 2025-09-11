@@ -131,6 +131,39 @@
     }
 
 }
+
+
 /* 
     cta-2-end
+*/
+/* 
+    cta-3-start
+*/
+.sr-cta-3 {
+    &-bg-shape-1 {
+        width: 17%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+    &-bg-shape-2 {
+        text-align: right;
+        width: 16%;
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        z-index: -1;
+    }
+
+    &-area {
+        .sr-cta-1-content {
+            .btn-wrap {
+                margin-top: 32px;
+            }
+        }
+    }
+}
+/* 
+    cta-3-end
 */

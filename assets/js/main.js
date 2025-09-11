@@ -629,7 +629,7 @@ var features3svg1 = gsap.timeline({
 	scrollTrigger: {
 		trigger: ".sr-features-3-svg-1",
 		toggleActions: "play none none reverse",
-		start: "top 90%",
+		start: "top 85%",
 		markers: false,
 	}
 })
@@ -638,6 +638,40 @@ features3svg1.from(".sr-features-3-svg-1 .has-ani", {
 	opacity: 0,
 	duration: .4,
 	stagger: 0.4,
+
+})
+
+var features3svg2 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sr-features-3-svg-2",
+		toggleActions: "play none none reverse",
+		start: "top 85%",
+		markers: false,
+	}
+})
+
+features3svg2.from(".sr-features-3-svg-2 .has-ani", {
+	scaleY: 0,
+	duration: .4,
+	stagger: 0.4,
+    transformOrigin: "bottom",
+
+})
+
+var features3svg3 = gsap.timeline({
+	scrollTrigger: {
+		trigger: ".sr-features-3-svg-3",
+		toggleActions: "play none none reverse",
+		start: "top 85%",
+		markers: false,
+	}
+})
+
+features3svg3.from(".sr-features-3-svg-3 .has-ani", {
+	scaleY: 0,
+	duration: .4,
+	stagger: 0.2,
+    transformOrigin: "bottom",
 
 })
 
@@ -666,7 +700,7 @@ features3svg1.from(".sr-features-3-svg-1 .has-ani", {
     });
   }
 
-  playRandomSequence();
+//   playRandomSequence();
 
 /* 
 	testimonial-1-slider-function

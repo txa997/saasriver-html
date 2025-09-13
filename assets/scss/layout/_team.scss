@@ -125,3 +125,31 @@
 /* 
     team-3-end
 */
+/* 
+    team-4-start
+*/
+
+.sr-team-4 {
+    &-sec-title {
+        max-width: 680px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            max-width: 530px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 35px;
+    }
+}
+
+
+/* 
+    team-4-end
+*/

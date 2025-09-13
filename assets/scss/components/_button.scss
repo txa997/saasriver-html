@@ -139,6 +139,21 @@
     }
 }
 
+
+.sr-pr-btn-5 {
+    font-family: var(--sr-font-3);
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+    background: var(--sr-clr-gd-2);
+    color: #fff;
+    padding: 26px 39px;
+    border-radius: 100px;
+    flex: 0 0 auto;
+    font-size: 18px;
+}
 /* 
     button-end
 */

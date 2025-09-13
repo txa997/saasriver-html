@@ -106,6 +106,30 @@
     }
 }
 
+.sr-subtitle-4 {
+    display: inline-block;
+    font-family: var(--sr-font-3);
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+    border: 1px solid #426fe6;
+    padding: 7px 24px;
+    padding-left: 51px;
+    border-radius: 100px;
+    margin-bottom: 20px;
+
+    &-icon {
+        position: absolute;
+        top: 38%;
+        left: 0;
+        transform: translateY(-50%);
+        z-index: 1;
+    }
+}
+
+
 .sr-sec-title-1 {
     font-family: var(--sr-font-1);
     font-weight: 600;
@@ -154,6 +178,33 @@
         font-size: 33px;
     }
 }
+
+.sr-sec-title-4 {
+    font-family: var(--sr-font-3);
+    font-weight: 800;
+    line-height: 1.076;
+    font-size: 65px;
+    color: var(--sr-clr-black-8);
+    margin-bottom: 6px;
+
+    @media #{$xl} {
+        font-size: 62px;
+    }
+    @media #{$lg} {
+        font-size: 54px;
+    }
+    @media #{$md} {
+        font-size: 46px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 38px;
+    }
+}
+
+
 
 /* 
     typography-end

@@ -493,6 +493,44 @@ if ($(".btn_split_1").length) {
 }
 
 
+if ($(".wa_magnetic_btn_v2-1").length) {
+    var waMagnets2v2 = document.querySelectorAll('.wa_magnetic_btn_v2-1');
+    var waStrength2v2 = 70;
+
+    waMagnets2v2.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet2);
+        magnet.addEventListener('mouseout', function(event) {
+            const innerElements = event.currentTarget.querySelectorAll('.wa_magnetic_btn_v2-1_elm');
+            innerElements.forEach((elm) => {
+                gsap.to(elm, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "ease1"
+                });
+            });
+        });
+    });
+
+    function moveMagnet2(event) {
+        var magnetButton = event.currentTarget;
+        var bounding = magnetButton.getBoundingClientRect();
+        const innerElements = magnetButton.querySelectorAll('.wa_magnetic_btn_v2-1_elm');
+
+        const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength2v2;
+        const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength2v2;
+
+        innerElements.forEach((elm) => {
+            gsap.to(elm, {
+                x: xMove,
+                y: yMove,
+                duration: 1,
+                ease: "ease1"
+            });
+        });
+    }
+}
+
 /* 
     hover-1-split
 */
@@ -715,10 +753,14 @@ $(".sr-price-4-card").on("mouseover", function(){
 /* 
 	faqs-4-hover-active
 */
-$(".sr-faqs-4-item-single").on("click", function(){
-	var current_class = document.getElementsByClassName("sr-faqs-4-item-single active");
-	current_class[0].className = current_class[0].className.replace(" active", "");
-	this.className += " active";
+
+$(".sr-faqs-4-item-single").on("click", function () {
+    if ($(this).hasClass("active")) {
+        $(this).removeClass("active");
+    } else {
+        $(".sr-faqs-4-item-single").removeClass("active");
+        $(this).addClass("active");
+    }
 });
 
 

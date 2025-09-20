@@ -660,11 +660,23 @@
         }
     }
 
+    &-img-wrap {
+        perspective: 2000px;
+        transform-style: preserve-3d;
+    }
+
     &-img {
         border-radius: 20px;
         background-color: rgb(255, 255, 255);
         box-shadow: -0.521px 2.954px 38px 0px rgba(0, 0, 0, 0.05);
         overflow: hidden;
+
+        transform: rotateX(40deg);
+        transition: all 1s var(--sr-cube-1);
+        &:is(.active) {
+            transform: rotateX(0deg);
+            transition-delay: 1.5s;
+        }
     }
     
     &-partner {

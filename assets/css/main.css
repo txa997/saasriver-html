@@ -1637,6 +1637,30 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 100px;
   flex: 0 0 auto;
   font-size: 18px;
+  overflow: hidden;
+  position: relative;
+  z-index: 1;
+  transition: all 0.5s var(--sr-cube-1);
+}
+.sr-pr-btn-5-bg-shadow {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0;
+  background: radial-gradient(circle, rgb(1, 221, 221) 0%, rgb(0, 147, 147) 30%, rgba(0, 0, 0, 0) 80%);
+  mix-blend-mode: hard-light;
+  opacity: 1;
+  transform: scale(1.7);
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.sr-pr-btn-5:hover {
+  color: #000;
+}
+.sr-pr-btn-5:hover .sr-pr-btn-5-bg-shadow {
+  opacity: 1;
 }
 
 /* 
@@ -3386,11 +3410,21 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sr-hero-4-content .btn-wrap {
   margin-top: 37px;
 }
+.sr-hero-4-img-wrap {
+  perspective: 2000px;
+  transform-style: preserve-3d;
+}
 .sr-hero-4-img {
   border-radius: 20px;
   background-color: rgb(255, 255, 255);
   box-shadow: -0.521px 2.954px 38px 0px rgba(0, 0, 0, 0.05);
   overflow: hidden;
+  transform: rotateX(40deg);
+  transition: all 1s var(--sr-cube-1);
+}
+.sr-hero-4-img:is(.active) {
+  transform: rotateX(0deg);
+  transition-delay: 1.5s;
 }
 .sr-hero-4-partner {
   border-style: solid;

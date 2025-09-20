@@ -553,6 +553,210 @@
     }
     
 }
+
 /* 
     price-3-end
+*/
+/* 
+    price-4-start
+*/
+.sr-price-4 {
+    &-sec-title {
+        max-width: 910px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sec-disc {
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 30px;
+        max-width: 1400px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$lg,$md} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-card {
+        position: relative;
+        z-index: 1;
+        padding: 10px;
+        box-shadow: -0px 82.954px 38px 0px rgba(0, 0, 0, 0.03);
+        overflow: hidden;
+        border-radius: 40px;
+
+        &::after {
+            content: "";
+            width: 100%;
+            height: 100%;
+            background: var(--sr-clr-gd-2);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0;
+            transition: all .5s var(--sr-cube-1);
+        }
+
+        .bg-clr {
+            background-color: #fff;
+            border-radius: 40px;
+        }
+
+        .money-back {
+            text-align: center;
+            color: #fff;
+            font-size: 15px;
+            padding-bottom: 15px;
+            padding-top: 10px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all .5s var(--sr-cube-1);
+        }
+
+        .card-top {
+            border-radius: 40px;
+            padding: 40px 50px;
+            background: #fafcfe;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                padding: 40px 15px;
+            }
+        }
+        .subtitle {
+            display: flex;
+            gap: 10px;
+            font-size: 18px;
+
+            .icon {
+                width: 23px;
+                height: 23px;
+                background: #426FE6;
+                flex: 0 0 auto;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                border-radius: 50%;
+            }
+        }
+
+        .package-name {
+            font-size: 40px;
+            font-weight: 800;
+            color: #0f1d37;
+            margin-top: 11px;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                font-size: 34px;
+            }
+        }
+        .package-disc {
+            font-size: 15px;
+            font-weight: 600;
+        }
+
+        .hr-line {
+            width: 100%;
+            height: 1px;
+            background: #D8D8D8;
+            margin-top: 30px;
+        }
+
+        .button-x-price {
+            display: flex;
+            align-items: center;
+            margin-top: 30px;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .sr-pr-btn-5 {
+            background: #1a3300;
+            padding: 17px 35px;
+            font-weight: 500;
+        }
+
+        .price {
+            font-size: 27px;
+            font-weight: 800;
+
+            span {
+                font-size: 14px;
+                font-weight: 500;
+            }
+        }
+
+        .price-disc {
+            font-size: 11px;
+        }
+        
+        .sr-about-4-list {
+            margin: 0;
+            margin-left: 80px;
+            padding: 45px 0;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                margin-left: 20px;
+            }
+        
+            li {
+                font-size: 16px;
+                color: #0f1d37;
+                font-weight: 700;
+            }
+        }
+
+        &:is(.active) {
+            &::after {
+                opacity: 1;
+            }
+            .money-back {
+                opacity: 1;
+            }
+        }
+    }
+
+    &-trust {
+        text-align: center;
+        margin-top: 70px;
+
+        i {
+            color: #00B67A;
+        }
+    }
+
+    &-division-line {
+        width: 100%;
+        height: 1px;
+        background: #F0F0F0;
+    }
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* 
+    price-4-end
 */

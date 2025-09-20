@@ -327,3 +327,111 @@
 /* 
     testimonial-3-end
 */
+
+
+/* 
+    testimonial-4-start
+*/
+.sr-testimonial-4 {
+    &-sec-title {
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+
+        .sr-subtitle-4-icon {
+            top: 50%;
+            left: -2px;
+        }
+
+        .sec-disc {
+            max-width: 530px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        
+    }
+
+    &-wrap {
+        &::after {
+            content: "";
+            width: 500px;
+            height: 100%;
+            background: linear-gradient(90deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            position: absolute;
+            top: 0;
+            left: 0;
+            z-index: 1;
+
+            @media #{$lg,$md,$xs} {
+                max-width: 300px;
+            }
+        }
+        &::before {
+            content: "";
+            width: 500px;
+            height: 100%;
+            background: linear-gradient(270deg,rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 0) 100%);
+            position: absolute;
+            top: 0;
+            right: 0;
+            z-index: 1;
+
+            @media #{$lg,$md} {
+                max-width: 300px;
+            }
+            @media #{$xs} {
+                max-width: 100px;
+            }
+        }
+    }
+
+    &-item {
+        display: flex;
+        gap: 20px;
+        margin-right: 20px;
+
+        &-single {
+            border-radius: 20px;
+            background-color: rgb(255, 255, 255);
+            box-shadow: -0.521px 2.954px 38px 0px rgba(0, 0, 0, 0.05);
+            max-width: 475px;
+            padding: 25px 30px;
+            flex: 0 0 auto;
+
+            .author-name {
+                display: flex;
+                align-items: center;
+                gap: 10px;
+                font-size: 20px;
+            }
+
+            .author-img {
+                width: 40px;
+                height: 40px;
+                flex: 0 0 auto;
+                border-radius: 50%;
+                display: flex;
+            }
+
+            .comment {
+                font-weight: 500;
+                margin-top: 13px;
+            }
+
+            .rating {
+                display: flex;
+                gap: 6px;
+                font-size: 16px;
+                color: #E5B91A;
+                margin-top: 14px;
+            }
+        }
+    }
+    
+}
+
+
+/* 
+    testimonial-4-end
+*/

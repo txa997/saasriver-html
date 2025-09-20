@@ -184,3 +184,84 @@
 /* 
     counter-3-end
 */
+/* 
+    counter-4-start
+*/
+.sr-counter-4 {
+    &-wrap {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 50px;
+        flex-wrap: wrap;
+
+        @media #{$lg} {
+            gap: 20px;
+        }
+
+        .division-line {
+            width: 2px;
+            height: 210px;
+            background: #F3F3F3;
+
+            @media #{$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+    &-item {
+        max-width: 380px;
+        flex: 0 0 auto;
+
+        @media #{$xxl} {
+            max-width: 350px;
+        }
+
+
+        @media #{$xl} {
+            max-width: 280px;
+        }
+        @media #{$lg} {
+            max-width: 274px;
+        }
+
+        @media #{$md,$xs} {
+            max-width: 274px;
+        }
+        .subtitle {
+            display: inline-block;
+            background: #eef9ff;
+            font-size: 20px;
+            font-weight: 500;
+            border-radius: 100px;
+            padding: 11px 20px;
+            margin-bottom: 20px;
+
+            i {
+                color: #2B92FF;
+            }
+        }
+
+        .number {
+            font-size: 90px;
+            line-height: 1;
+            font-weight: 400;
+            letter-spacing: -0.03em;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 60px;
+            }
+        }
+
+        .disc {
+            font-weight: 500;
+        }
+    }
+}
+
+
+
+/* 
+    counter-4-end
+*/

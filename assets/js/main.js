@@ -702,6 +702,26 @@ features3svg3.from(".sr-features-3-svg-3 .has-ani", {
 
 //   playRandomSequence();
 
+
+/* 
+	price-4-hover-active
+*/
+$(".sr-price-4-card").on("mouseover", function(){
+	var current_class = document.getElementsByClassName("sr-price-4-card active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
+/* 
+	faqs-4-hover-active
+*/
+$(".sr-faqs-4-item-single").on("click", function(){
+	var current_class = document.getElementsByClassName("sr-faqs-4-item-single active");
+	current_class[0].className = current_class[0].className.replace(" active", "");
+	this.className += " active";
+});
+
+
 /* 
 	testimonial-1-slider-function
 */
@@ -798,6 +818,53 @@ if ($('.t2_slider_active').length) {
 
 }
 
+
+/* 
+	services-4-slider-function
+*/
+if ($('.s4_slider_active').length) {
+	var t2_slider_active = new Swiper(".s4_slider_active", {
+		loop: true,
+		speed: 600,
+		spaceBetween: 0,
+        slidesPerView: "auto",
+        direction: "vertical",
+
+        allowTouchMove: false, 
+
+		navigation: {
+			nextEl: ".sr_s4_next",
+			prevEl: ".sr_s4_prev",
+		},
+
+        // pagination: {
+		// 	el: ".sr_t2_pagination",
+		// 	clickable: true,
+		// },
+
+        // breakpoints: {
+        //     0: {
+        //         slidesPerView: 1,
+        //     },
+        //     576: {
+        //         slidesPerView: 1,
+        //     },
+        //     768: {
+        //         slidesPerView: 1,
+        //     },
+        //     992: {
+        //         slidesPerView: 2,
+        //     },
+
+        // },
+
+	});
+
+
+
+
+}
+
 	
 /* 
     marquee-right
@@ -830,7 +897,7 @@ $('.wa_marquee_left').marquee({
 /* 
     marquee-left-nopause
 */
-$('.wa_marquee_left_nopause').marquee({
+$('.wa_marquee_left_nopausewa_marquee_left_nopause').marquee({
 	speed: 20,
 	gap: 0,
 	delayBeforeStart: 0,

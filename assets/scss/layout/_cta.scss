@@ -164,6 +164,42 @@
         }
     }
 }
+
+
 /* 
     cta-3-end
+*/
+/* 
+    cta-4-start
+*/
+.sr-cta-4 {
+    &-wrap {
+        border-radius: 20px;
+        padding: 120px 0;
+    }
+
+    &-content {
+        max-width: 800px;
+        margin-left: 140px;
+
+        @media #{$md,$xs} {
+            margin-left: 0px;
+            padding: 0 30px;
+        }
+
+        .sr-subtitle-4 {
+            color: #fff;
+            border: none;
+            padding-left: 40px;
+            font-size: 20px;
+        }
+
+        .sr-sec-title-4 {
+            color: #fff;
+            margin-bottom: 37px;
+        }
+    }
+}
+/* 
+    cta-4-end
 */

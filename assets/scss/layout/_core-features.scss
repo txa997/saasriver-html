@@ -299,17 +299,32 @@
     }
     
     &-item {
+        .icon {
+            display: inline-block;
+        }
         .title {
             font-size: 22px;
             margin-top: 17px;
+            transition: all .3s var(--sr-cube-1);
 
             @media #{$xl,$lg,$md,$xs} {
                 font-size: 20px;
+            }
+
+            &:hover {
+                color: var(--sr-clr-pr-3);
+                transform: translateX(2px);
             }
         }
 
         .disc {
             margin-top: 4px;
+        }
+
+        &:hover {
+            .icon {
+                animation: bounce2 1s;
+            }
         }
     }
     

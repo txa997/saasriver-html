@@ -408,6 +408,25 @@ function afterPageLoad() {
 */
 }
 
+
+
+// wa-bg-parallax
+gsap.utils.toArray(".wa_parallax_bg").forEach(element => {
+	gsap.fromTo(
+		element,
+		{ backgroundPosition: "50% 0%" }, 
+		{ 
+			backgroundPosition: "50% 100%", 
+			ease: "none",
+			scrollTrigger: {
+				trigger: element,
+				scrub: 2,    
+				markers: false,  
+			},
+		}
+	);
+});
+
 /* 
     subtitle-1-icon
 */	
@@ -492,15 +511,14 @@ if ($(".btn_split_1").length) {
     });
 }
 
-
-if ($(".wa_magnetic_btn_v2-1").length) {
-    var waMagnets2v2 = document.querySelectorAll('.wa_magnetic_btn_v2-1');
-    var waStrength2v2 = 70;
+if ($(".wa_hero").length) {
+    var waMagnets2v2 = document.querySelectorAll('.wa_hero');
+    var waStrength2v2 = .5;
 
     waMagnets2v2.forEach((magnet) => {
         magnet.addEventListener('mousemove', moveMagnet2);
         magnet.addEventListener('mouseout', function(event) {
-            const innerElements = event.currentTarget.querySelectorAll('.wa_magnetic_btn_v2-1_elm');
+            const innerElements = event.currentTarget.querySelectorAll('.wa_hero_elm');
             innerElements.forEach((elm) => {
                 gsap.to(elm, {
                     x: 0,
@@ -515,7 +533,45 @@ if ($(".wa_magnetic_btn_v2-1").length) {
     function moveMagnet2(event) {
         var magnetButton = event.currentTarget;
         var bounding = magnetButton.getBoundingClientRect();
-        const innerElements = magnetButton.querySelectorAll('.wa_magnetic_btn_v2-1_elm');
+        const innerElements = magnetButton.querySelectorAll('.wa_hero_elm');
+
+        const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength2v2;
+        const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength2v2;
+
+        innerElements.forEach((elm) => {
+            gsap.to(elm, {
+                x: xMove,
+                y: yMove,
+                duration: 1,
+                ease: "ease1"
+            });
+        });
+    }
+}
+
+if ($(".wa_btn").length) {
+    var waMagnets2v2 = document.querySelectorAll('.wa_btn');
+    var waStrength2v2 = 70;
+
+    waMagnets2v2.forEach((magnet) => {
+        magnet.addEventListener('mousemove', moveMagnet2);
+        magnet.addEventListener('mouseout', function(event) {
+            const innerElements = event.currentTarget.querySelectorAll('.wa_btn_elm');
+            innerElements.forEach((elm) => {
+                gsap.to(elm, {
+                    x: 0,
+                    y: 0,
+                    duration: 1,
+                    ease: "ease1"
+                });
+            });
+        });
+    });
+
+    function moveMagnet2(event) {
+        var magnetButton = event.currentTarget;
+        var bounding = magnetButton.getBoundingClientRect();
+        const innerElements = magnetButton.querySelectorAll('.wa_btn_elm');
 
         const xMove = (((event.clientX - bounding.left) / magnetButton.offsetWidth) - 0.5) * waStrength2v2;
         const yMove = (((event.clientY - bounding.top) / magnetButton.offsetHeight) - 0.5) * waStrength2v2;
@@ -713,32 +769,6 @@ features3svg3.from(".sr-features-3-svg-3 .has-ani", {
 
 })
 
-/* 
-	customer-3
-*/
-
-// let customer3item = document.querySelectorAll(".author-img");
-  const items = gsap.utils.toArray(".author-img");
-
-  function playRandomSequence() {
-    const shuffled = gsap.utils.shuffle(items);
-
-    const tl = gsap.timeline({
-      onComplete: playRandomSequence, 
-      defaults: { ease: "power2.inOut" }
-    });
-
-    shuffled.forEach(item => {
-      tl.fromTo(item,
-        { scale: 1 },
-        { scale: 1.2, duration: 0.2 }
-      ).to(item,
-        { scale: 1, duration: 0.2 }
-      );
-    });
-  }
-
-//   playRandomSequence();
 
 
 /* 
@@ -763,6 +793,26 @@ $(".sr-faqs-4-item-single").on("click", function () {
     }
 });
 
+
+/* 
+	highlight-4-btn
+*/
+if (window.matchMedia("(min-width: 992px)").matches) { 
+    var highlight4btn = gsap.timeline({
+        scrollTrigger: {
+            trigger: ".sr-highlights-4-wrap",
+            toggleActions: "play none none reverse",
+            start: "top 85%",
+            scrub: true,
+            markers: false,
+        }
+    })
+    
+    highlight4btn.from(".sr-highlights-4-all-btn", {
+        transform: "translate(-50%, 0%)",
+    })
+    
+}
 
 /* 
 	testimonial-1-slider-function
@@ -939,7 +989,7 @@ $('.wa_marquee_left').marquee({
 /* 
     marquee-left-nopause
 */
-$('.wa_marquee_left_nopausewa_marquee_left_nopause').marquee({
+$('.wa_marquee_left_nopause').marquee({
 	speed: 20,
 	gap: 0,
 	delayBeforeStart: 0,

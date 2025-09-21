@@ -414,3 +414,311 @@
 */
 
 
+/* 
+    footer-4-start
+*/
+.sr-footer-4 {
+    &-area {
+        background: linear-gradient(0deg, rgb(1 211 211 / 30%) 0%, rgba(255, 255, 255, 0) 100%);
+    }
+
+    &-wrap {
+        display: flex;
+        gap: 100px;
+        margin-right: -130px;
+        align-items: center;
+        flex-wrap: wrap;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            margin-right: 0px;
+            gap: 50px;
+        }
+    }
+
+    &-widget {
+        .widget-title {
+            font-size: 30px;
+            font-weight: 800;
+        }
+
+        &:nth-child(1) {
+            margin-right: auto;
+            margin-top: -80px;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                margin-top: 0px;
+            }
+        }
+    }
+
+    
+    &-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 11px;
+        margin-top: 30px;
+
+        li {
+            font-weight: 500;
+            color: #0f1d37;
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+        
+    }
+
+    &-logo {
+        display: inline-block;
+        margin-bottom: 35px;
+    }
+
+    &-gallery {
+        max-width: 555px;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 35px;
+
+        @media #{$xxl} {
+            max-width: 525px;
+        }
+        @media #{$xl} {
+            max-width: 355px;
+        }
+
+        
+
+        .item-col {
+            display: flex;
+            flex-direction: column;
+            gap: 35px;
+            align-items: start;
+
+            &:nth-child(2) {
+                margin-top: 50px;
+            }
+            &:nth-child(3) {
+                margin-top: 80px;
+            }
+        }
+
+        .single-img {
+            display: inline-block;
+            border-radius: 20px;
+        }
+    }
+
+
+    &-disc {
+        max-width: 360px;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            max-width: 270px;
+        }
+
+        .disc-title {
+            font-size: 40px;
+            font-weight: 800;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                font-size: 28px;
+            }
+        }
+
+        .disc-rating {
+            margin-top: 15px;
+            margin-bottom: 34px;
+
+            .rating {
+                display: flex;
+                gap: 5px;
+                font-size: 20px;
+                color: #ffcc00;
+            }
+
+            .title {
+                font-size: 15px;
+                font-weight: 800;
+                color: #000;
+                margin-top: 10px;
+            }
+        }
+
+        .sr-pr-btn-5 {
+            background: #1a3300;
+
+            &:hover {
+                color: #fff;
+            }
+        }
+    }
+    
+
+    &-wrap-2 {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    &-menu-2 {
+        display: flex;
+        gap: 15px 30px;
+        flex-wrap: wrap;
+
+        li {
+            font-weight: 500;
+            color: #000;
+
+            a {
+                width: 100%;
+                display: inline !important;
+                background-position-y: 0px;
+                background-repeat: no-repeat;
+                background-size: 0 100%;
+                backface-visibility: hidden;
+                -webkit-backface-visibility: hidden;
+                background-image: linear-gradient(transparent calc(100% - 1px), currentColor 2px);
+                -webkit-transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                transition: 0.6s cubic-bezier(0.215, 0.61, 0.355, 1);
+                &:hover {
+                    background-size: 100% 100%;
+                }
+            }
+        }
+    }
+    
+    
+    &-social {
+        display: flex;
+        gap: 20px;
+
+        .link-elm {
+            width: 36px;
+            height: 35px;
+            background: #000;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #F1FDFD;
+            font-size: 15px;
+            transition: all .5s var(--sr-cube-1);
+
+            &:hover {
+                background: #fff;
+                color: #000;
+            }
+        }
+    }
+
+    &-wrap-3 {
+        display: flex;
+        justify-content: space-between;
+        gap: 20px;
+        flex-wrap: wrap;
+        padding: 25px 0;
+        
+    }
+
+    &-copyright {
+        color: #000;
+    }
+
+
+    &-link {
+        display: flex;
+        gap: 15px 40px;
+        flex-wrap: wrap;
+
+        .link-elm {
+            color: #000;
+            transition: all .4s var(--sr-cube-1);
+
+            &:hover {
+                opacity: .7;
+                transform: translateX(3px);
+            }
+        }
+    }
+    
+
+
+    &-marquee {
+        position: absolute;
+        bottom: -10px;
+        left: 0;
+        z-index: -1;
+        opacity: 8%;
+
+        @media #{$xs} {
+            bottom: 0px;
+        }
+
+        &-item {
+            font-size: 365px;
+            font-weight: 800;
+            color: #5dc1c1;
+            line-height: .7;
+            display: flex;
+
+            span {
+                flex: 0 0 auto;
+            }
+
+            @media #{$xxxl} {
+                font-size: 345px;
+            }
+            
+            @media #{$xxl} {
+                font-size: 325px;
+            }
+            
+            @media #{$xl} {
+                font-size: 305px;
+            }
+            
+            @media #{$lg} {
+                font-size: 285px;
+            }
+            
+            @media #{$md} {
+                font-size: 265px;
+            }            
+            @media #{$xs} {
+                font-size: 185px;
+            }            
+            @media #{$sm} {
+                font-size: 225px;
+            }
+        }
+    }
+    
+    
+}
+
+
+
+
+
+
+
+/* 
+    footer-4-end
+*/
+
+

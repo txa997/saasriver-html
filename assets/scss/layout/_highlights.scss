@@ -157,9 +157,14 @@
 
         .title {
             font-size: 28px;
+            transition: all .3s var(--sr-cube-1);
 
             @media #{$xxl,$xl,$lg,$md,$xs} {
                 font-size: 24px;
+            }
+
+            &:hover {
+                color: var(--sr-clr-pr-3);
             }
         }
 
@@ -186,6 +191,7 @@
         .item-img {
             border-radius: 20px 20px 0 0;
             border: 2px solid #e7eefe;
+            transition: all .4s var(--sr-cube-1);
 
             img {
                 transform: scale(102%);
@@ -194,6 +200,14 @@
 
         &:hover {
             border-color: var(--sr-clr-pr-3);
+
+            .icon {
+                animation: swing 1s;
+            }
+
+            .item-img {
+                transform: scale(102%);
+            }
         }
 
         &:is(.has-v2) {

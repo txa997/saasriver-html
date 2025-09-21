@@ -179,6 +179,7 @@
 
             img {
                 object-position: top;
+                transition: all .5s var(--sr-cube-1);
             }
         }
 
@@ -239,6 +240,12 @@
             .sr-social-1 {
                 transform: translateY(0);
                 opacity: 1;
+            }
+
+            .member-img {
+                img {
+                    transform: scale(102%);
+                }
             }
         }
         

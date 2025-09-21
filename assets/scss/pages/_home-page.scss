@@ -30,6 +30,21 @@
 }
 
 
+.sr-home-4 {
+    @media #{$over,$xxxl,$xxl} {
+        &::-webkit-scrollbar-thumb {
+            background: var(--sr-clr-pr-3);
+        }
+
+    }
+
+    .wa-back-to-top {
+        border: 1px solid rgb(0 206 206 / 48%);
+        box-shadow: 1.782px 0.908px 32.2px 2.8px rgba(122, 90, 248, 0.1);
+        color: var(--sr-clr-pr-3);
+    }
+}
+
 
 /* 
     home-css-end

@@ -687,6 +687,10 @@
             background: #1a3300;
             padding: 17px 35px;
             font-weight: 500;
+
+            &:hover {
+                color: #fff;
+            }
         }
 
         .price {

@@ -362,3 +362,111 @@
 /* 
     features-3-end
 */
+/* 
+    features-5-start
+*/
+.sr-features-5 {
+    &-sec-title {
+        display: flex;
+        align-items: end;
+        gap: 40px;
+        justify-content: space-between;
+
+        @media #{$md,$xs} {
+            flex-wrap: wrap;
+        }
+
+        .left {
+            max-width: 680px;
+        }
+
+        .sec-disc {
+            font-size: 24px;
+            font-weight: 500;
+            margin-top: 10px;
+        }
+    }
+
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 20px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr
+        }
+    }
+    
+
+    &-item {
+        background-color: #fff9f6;
+        border-radius: 30px;
+        padding: 40px 70px;
+
+        @media #{$xxl,$xl,$lg,$md,$xs} {
+            padding: 40px 30px;
+        }
+
+        .icon-x-title {
+            display: flex;
+            align-items: center;
+            gap: 15px 30px;
+            margin-bottom: 22px;
+
+            @media #{$md,$xs} {
+                flex-wrap: wrap;
+            }
+        }
+
+        
+        .icon {
+            width: 110px;
+            height: 110px;
+            background: #fff;
+            flex: 0 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+
+        .title {
+            font-size: 30px;
+            letter-spacing: -0.03em;
+
+            @media #{$xxl,$xl,$lg,$md,$xs} {
+                font-size: 22px;
+            }
+        }
+        .disc {
+            font-weight: 500;
+        }
+
+
+        .features-list {
+            display: inline-flex;
+            background: #fff;
+            gap: 25px;
+            border-radius: 100px;
+            padding: 10px 20px;
+            margin-top: 24px;
+
+            @media #{$lg,$md,$xs} {
+                flex-wrap: wrap;
+            }
+
+            li {
+                font-size: 15px;
+                display: flex;
+                align-items: center;
+                gap: 10px;
+            }
+        }
+        
+    }
+}
+
+
+/* 
+    features-5-end
+*/

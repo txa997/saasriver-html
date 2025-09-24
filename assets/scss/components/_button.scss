@@ -179,6 +179,12 @@
             opacity: 1;
         }
     }
+
+    &:is(.has-v2) {
+        background: var(--sr-clr-pr-5);
+        padding: 26px 35px;
+    }
+
 }
 /* 
     button-end

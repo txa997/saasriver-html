@@ -42,6 +42,15 @@
     margin-bottom: 0;
 }
 
+.sr-p-5 {
+    font-family: var(--sr-font-1);
+    line-height: 1.444;
+    font-size: 20px;
+    font-weight: 500;
+    color: var(--sr-clr-black-11);
+    margin-bottom: 0;
+}
+
 
 .sr-h-1 {
     font-family: var(--sr-font-1);
@@ -65,6 +74,14 @@
     line-height: 1.25;
     font-weight: 700;
     color: var(--sr-clr-black-8);
+    margin-bottom: 0;
+}
+
+.sr-h-5 {
+    font-family: var(--sr-font-3);
+    line-height: 1.25;
+    font-weight: 600;
+    color: var(--sr-clr-black-10);
     margin-bottom: 0;
 }
 
@@ -129,6 +146,21 @@
     }
 }
 
+.sr-subtitle-5 {
+    font-family: var(--sr-font-3);
+    font-weight: 700;
+    font-size: 19px;
+    line-height: 1.5;
+    background: linear-gradient(45deg, #f46800, #a54600);
+    display: inline-block;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 10px;
+
+    @media #{$xs} {
+        font-size: 16px;
+    }
+}
 
 .sr-sec-title-1 {
     font-family: var(--sr-font-1);
@@ -211,7 +243,38 @@
     }
 }
 
+.sr-sec-title-5 {
+    font-family: var(--sr-font-3);
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: -0.03em;
+    font-size: 60px;
+    background: linear-gradient(135deg, #000 35%, #f46800);
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 0;
 
+
+    @media #{$xxl} {
+        font-size: 55px;
+    }
+
+    @media #{$xl} {
+        font-size: 50px;
+    }
+    @media #{$lg} {
+        font-size: 45px;
+    }
+    @media #{$md} {
+        font-size: 40px;
+    }
+    @media #{$xs} {
+        font-size: 30px;
+    }
+    @media #{$sm} {
+        font-size: 35px;
+    }
+}
 
 /* 
     typography-end

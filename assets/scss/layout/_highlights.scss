@@ -265,3 +265,112 @@
 /* 
     highlights-4-end
 */
+
+/* 
+    highlights-5-start
+*/
+
+.sr-highlight-5 {
+    &-wrap {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        gap: 50px;
+        align-items: center;
+
+        @media #{$md,$xs} {
+            grid-template-columns: 1fr;
+        }
+    }
+
+    &-sec-title {
+        .sec-disc {
+            max-width: 530px;
+            margin-top: 10px;
+        }
+    }
+
+    &-list {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px;
+        max-width: 500px;
+        margin-bottom: 50px;
+
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+        }
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        li {
+            font-size: 23px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                font-size: 20px;
+            }
+
+            .icon {
+                width: 60px;
+                height: 60px;
+                background: #262726;
+                border-radius: 50%;
+                flex: 0 0 auto;
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-size: 18px;
+            }
+        }
+    }
+
+    &-right {
+        .sr-features-3-svg-2 {
+            position: absolute;
+            left: -160px;
+            bottom: -40px;
+            max-width: 400px;
+            background: #fff;
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+
+            @media #{$xl,$lg,$md,$xs} {
+                left: 0;
+            }
+        }
+        .sr-features-3-svg-3 {
+            position: absolute;
+            left: 22%;
+            top: 11%;
+            max-width: 455px;
+            box-shadow: 0 0 20px rgb(0 0 0 / 20%);
+
+            @media #{$xl,$lg,$md} {
+                left: 10%;
+            }
+            @media #{$xs} {
+                left: unset;
+                right: 0;
+                top: 0;
+            }
+        }
+    }
+
+    &-img {
+        height: 740px;
+        border-radius: 30px;
+    }
+
+
+}
+
+
+
+/* 
+    highlights-5-end
+*/

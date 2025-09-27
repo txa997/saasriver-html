@@ -840,6 +840,17 @@
             left: 0;
         }
 
+        &-svg {
+
+            circle {
+                &:nth-child(2) {
+                    stroke-dasharray: 230%;
+                    stroke-dashoffset: -230%;
+                    transition: all 2s var(--sr-cube-1);
+                }
+            }
+        }
+
         .content {
             position: absolute;
             top: 50%;
@@ -857,6 +868,19 @@
             font-weight: 500;
             color: var(--sr-clr-black-8);
         }
+
+        &:is(.active) {
+            .sr-hero-5-progress-svg {
+
+                circle {
+                    &:nth-child(2) {
+                        transition-delay: 1s;
+                        stroke-dashoffset: -40%;
+                    }
+                }
+            }
+        }
+
     }
 
     &-partner {

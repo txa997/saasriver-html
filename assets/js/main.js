@@ -150,42 +150,27 @@ $(document).on('keydown', function(event) {
 document.addEventListener("DOMContentLoaded", function () {
 	window.addEventListener('load', function(){
 
+        let preloader = document.querySelector(".nm-preloader");
+		if (preloader) {
+			preloader.classList.add("preloaded");
+			setTimeout(function () {
+				  preloader.remove();
+			}, 1000 ) ;
+
+		}
+
+
 		if (document.querySelectorAll(".pg-preloader").length) {
 			const loader = document.querySelector(".pg-preloader");
-			const percentage = document.getElementById("pg-percentage");
-			const fill = document.getElementById("pg-fill");
+			
+            setTimeout(() => {
+                loader.classList.add("loaded");
+                initAfterPreloader();
+            }, 500);
+            setTimeout(function () {
+                loader.remove();
+            }, 1500);
 
-			const images = document.images;
-			const total = images.length;
-			let count = 0;
-
-			if (total === 0) updateLoader(100);
-
-			Array.from(images).forEach((img) => {
-				const imageClone = new Image();
-				imageClone.onload = imageClone.onerror = () => {
-					count++;
-					const percent = Math.round((count / total) * 100);
-					updateLoader(percent);
-
-					if (count === total) {
-
-						setTimeout(() => {
-							loader.classList.add("loaded");
-							initAfterPreloader();
-						}, 500);
-						setTimeout(function () {
-							loader.remove();
-						}, 1500);
-					}
-				};
-				imageClone.src = img.src;
-			});
-
-			function updateLoader(percent) {
-				percentage.textContent = `${percent}%`;
-				fill.style.width = `${percent}%`;
-			}
 		} else {
 			initAfterPreloader();
 		}
@@ -302,6 +287,24 @@ function initAfterPreloader() {
 				});
 			});
 		}
+
+
+        		/* 
+			section-title-1
+		*/
+		const wa_bg_position = new SplitText(".wa_bg_position", { type: "lines" });
+		wa_bg_position.lines.forEach((target) => {
+			gsap.to(target, {
+				backgroundPositionX: 50,
+				ease: "none",
+				scrollTrigger: {
+					trigger: target,
+					scrub: true,
+					start: 'top 80%',
+					end: "bottom center"
+				}
+			});
+		});
 	}	
 
 
@@ -366,8 +369,6 @@ function afterPageLoad() {
             });
         }
     });
-
-
 
 
 
@@ -444,8 +445,6 @@ gsap.utils.toArray('.subtitle_1_icon').forEach((item) => {
         });
     }
 );
-
-
 
 
 /* 
@@ -652,20 +651,6 @@ if ($('.sr-hero-1-cursor-shape').length) {
     $bsH1area.on('mousemove', bsH1moveCircle);
 }
 
-/* 
-	workflow-add-class
-*/
-// gsap.to(".sr-workflow-1-wrap", {
-// 	scrollTrigger: {
-// 		trigger: ".sr-workflow-1-wrap",
-// 		start: "top 70%",
-// 		end: "bottom bottom",
-// 		toggleActions: "play none none reverse",
-// 		toggleClass: "active",
-// 		once: true,
-// 		markers: true,
-// 	}
-// });
 
 
 /* 
@@ -823,15 +808,6 @@ if ($('.sr_t1_slider_active').length) {
 		speed: 600,
 		spaceBetween: 24,
 
-		// autoplay: {
-        //     delay: 5000,
-        // },
-
-		// navigation: {
-		// 	nextEl: ".pg_t1_next",
-		// 	prevEl: ".pg_t1_prev",
-		// },
-
         pagination: {
 			el: ".sr_t1_pagination",
 			clickable: true,
@@ -929,26 +905,28 @@ if ($('.s4_slider_active').length) {
 			prevEl: ".sr_s4_prev",
 		},
 
-        // pagination: {
-		// 	el: ".sr_t2_pagination",
-		// 	clickable: true,
-		// },
+	});
 
-        // breakpoints: {
-        //     0: {
-        //         slidesPerView: 1,
-        //     },
-        //     576: {
-        //         slidesPerView: 1,
-        //     },
-        //     768: {
-        //         slidesPerView: 1,
-        //     },
-        //     992: {
-        //         slidesPerView: 2,
-        //     },
 
-        // },
+
+
+}
+
+
+
+/* 
+	testimonial-5-slider-function
+*/
+if ($('.t5_slider_active').length) {
+	var t5_slider_active = new Swiper(".t5_slider_active", {
+		loop: true,
+		speed: 600,
+		spaceBetween: 0,
+        // slidesPerView: "auto",
+
+		autoplay: {
+            delay: 5000,
+        },
 
 	});
 
@@ -1043,137 +1021,6 @@ document.querySelectorAll(".wa_placeholder").forEach(waPlaceholderInput => {
 		}
 	}
 });
-
-
-/* 
-	cursor-follower-function
-*/
-class Cursor {
-    constructor(options) {
-        this.options = $.extend(true, {
-            container: "body",
-            speed: 0.7,
-            ease: "expo.out",
-            visibleTimeout: 300
-        }, options);
-        this.body = $(this.options.container);
-        this.el = $('<div class="wa-cursor"></div>');
-        this.text = $('<div class="wa-cursor-text"></div>');
-        this.init();
-    }
-
-    init() {
-        this.el.append(this.text);
-        this.body.append(this.el);
-        this.bind();
-        this.move(-window.innerWidth, -window.innerHeight, 0);
-    }
-
-    bind() {
-        const self = this;
-
-        this.body.on('mouseleave', () => {
-            self.hide();
-        }).on('mouseenter', () => {
-            self.show();
-        }).on('mousemove', (e) => {
-            this.pos = {
-                x: this.stick ? this.stick.x - ((this.stick.x - e.clientX) * 0.15) : e.clientX,
-                y: this.stick ? this.stick.y - ((this.stick.y - e.clientY) * 0.15) : e.clientY
-            };
-            this.update();
-        }).on('mousedown', () => {
-            self.setState('-active');
-        }).on('mouseup', () => {
-            self.removeState('-active');
-        }).on('mouseenter', 'a,input,textarea,button', () => {
-            self.setState('-pointer');
-        }).on('mouseleave', 'a,input,textarea,button', () => {
-            self.removeState('-pointer');
-        }).on('mouseenter', 'iframe', () => {
-            self.hide();
-        }).on('mouseleave', 'iframe', () => {
-            self.show();
-        }).on('mouseenter', '[data-cursor]', function () {
-            self.setState(this.dataset.cursor);
-        }).on('mouseleave', '[data-cursor]', function () {
-            self.removeState(this.dataset.cursor);
-        }).on('mouseenter', '[data-cursor-text]', function () {
-            self.setText(this.dataset.cursorText);
-        }).on('mouseleave', '[data-cursor-text]', function () {
-            self.removeText();
-        }).on('mouseenter', '[data-cursor-stick]', function () {
-            self.setStick(this.dataset.cursorStick);
-        }).on('mouseleave', '[data-cursor-stick]', function () {
-            self.removeStick();
-        });
-    }
-
-    setState(state) {
-        this.el.addClass(state);
-    }
-
-    removeState(state) {
-        this.el.removeClass(state);
-    }
-
-    toggleState(state) {
-        this.el.toggleClass(state);
-    }
-
-    setText(text) {
-        this.text.html(text);
-        this.el.addClass('-text');
-    }
-
-    removeText() {
-        this.el.removeClass('-text');
-    }
-
-    setStick(el) {
-        const target = $(el);
-        const bound = target.get(0).getBoundingClientRect();
-        this.stick = {
-            y: bound.top + (target.height() / 2),
-            x: bound.left + (target.width() / 2)
-        };
-        this.move(this.stick.x, this.stick.y, 5);
-    }
-
-    removeStick() {
-        this.stick = false;
-    }
-
-    update() {
-        this.move();
-        this.show();
-    }
-
-    move(x, y, duration) {
-        gsap.to(this.el, {
-            x: x || this.pos.x,
-            y: y || this.pos.y,
-            force3D: true,
-            overwrite: true,
-            ease: this.options.ease,
-            duration: this.visible ? (duration || this.options.speed) : 0
-        });
-    }
-
-    show() {
-        if (this.visible) return;
-        clearInterval(this.visibleInt);
-        this.el.addClass('-visible');
-        this.visibleInt = setTimeout(() => this.visible = true);
-    }
-
-    hide() {
-        clearInterval(this.visibleInt);
-        this.el.removeClass('-visible');
-        this.visibleInt = setTimeout(() => this.visible = false, this.options.visibleTimeout);
-    }
-}
-const cursor = new Cursor();
 
 /* 
 	bootstrap-tooltip-activation

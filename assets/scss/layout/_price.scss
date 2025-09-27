@@ -751,16 +751,121 @@
 }
 
 
+/* 
+    price-4-end
+*/
+/* 
+    price-5-start
+*/
+.sr-price-5 {
+    &-wrap {
+        padding: 0 10px;
+        display: grid;
+        grid-template-columns: 1fr 1.8fr 1fr;
+        gap: 55px;
+        max-width: 1920px;
+        margin-left: auto;
+        margin-right: auto;
+
+        @media #{$xl,$lg} {
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 30px;
+        }
+        @media #{$md} {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+            gap: 30px;
+        }
+        @media #{$sm} {
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+        }
+    }
+
+    &-item {
+        background: #edf3ff;
+        border-radius: 20px;
+        padding: 50px 70px;
+
+        @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+            padding: 50px 30px;
+        }
+
+        .plan-name {
+            font-size: 33px;
+            letter-spacing: -0.03em;
+            margin-bottom: 13px;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                font-size: 26px;
+            }
+        }
+
+        .price {
+            font-size: 50px;
+            margin-bottom: 35px;
+
+            @media #{$xxxl,$xxl,$xl,$lg,$md,$xs} {
+                font-size: 40px;
+            }
+
+            span {
+                font-size: 18px;
+                font-weight: 400;
+            }
+        }
+
+        .price-disc {
+            margin-bottom: 20px;
+        }
+
+        .price-list {
+            display: flex;
+            flex-direction: column;
+            gap: 17px;
+            margin-top: 35px;
+
+            li {
+                i {
+                    margin-right: 7px;
+                    font-size: 16px;
+                    transform: translateY(-2px);
+                }
+            }
+        }
+
+        .item-img {
+            border-radius: 10px;
+            overflow: hidden;
+            height: 500px;
+
+            @media #{$xl,$lg,$md,$xs} {
+                display: none;
+            }
+        }
+
+        &:nth-child(2) {
+            background-color: #fff8ed;
+        }
+        &:nth-child(3) {
+            background-color: #f2ffed;
+        }
 
 
-
-
-
-
-
+        &:is(.has-v2) {
+            @media #{$over,$xxxl,$xxl} {
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    }
+}
 
 
 
 /* 
-    price-4-end
+    price-5-end
 */

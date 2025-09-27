@@ -1,0 +1,118 @@
+/* 
+    choose-5-start
+*/
+.sr-choose-5 {
+    &-wrap {
+        background-color: #fff1e8;
+        border-radius: 20px;
+        padding: 100px 75px;
+        padding-bottom: 140px;
+
+        @media #{$lg,$md} {
+            padding-bottom: 0;
+        }
+
+        @media #{$xs} {
+            padding: 100px 20px;
+            padding-bottom: 0px;
+        }
+    }
+
+    &-icon {
+        position: absolute;
+        top: -40px;
+        left: -54px;
+    }
+
+    &-sec-title {
+        max-width: 670px;
+
+        .sec-disc {
+            max-width: 580px;
+            margin-top: 10px;
+        }
+    }
+
+    &-list {
+        display: flex;
+        flex-direction: column;
+        align-items: self-start;
+        gap: 8px;
+        margin-top: 40px;
+
+        li {
+            display: inline-block;
+            background-color: #ffe5dd;
+            font-size: 18px;
+            font-weight: 800;
+            padding: 10px 25px;
+            border-radius: 100px;
+
+            .icon {
+                width: 22px;
+                height: 22px;
+                background: #fff;
+                border-radius: 50%;
+                color: #000;
+                margin-right: 5px;
+                display: inline-flex;
+                font-size: 14px;
+                justify-content: center;
+                align-items: center;
+                flex: 0 0 auto;
+            }
+
+            &:nth-child(2) {
+                background: #deefff;
+            }
+            &:nth-child(3) {
+                background: #ffd9d9;
+            }
+        }
+    }
+
+    &-img {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        z-index: -1;
+        width: 55%;
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+            margin-top: 50px;
+        }
+    }
+
+    &-apps {
+        display: inline-flex;
+        gap: 30px;
+        flex-wrap: wrap;
+        position: absolute;
+        bottom: 60px;
+        left: 63%;
+        transform: translateX(-50%);
+
+        @media #{$lg,$md,$xs} {
+            position: unset;
+            transform: unset;
+            margin-top: 50px;
+        }
+
+        .app-elm {
+            transition: all .5s var(--sr-cube-1);
+
+            &:hover {
+                transform: scale(98%);
+            }
+        }
+    }
+}
+
+
+
+
+
+/* 
+    choose-5-end
+*/

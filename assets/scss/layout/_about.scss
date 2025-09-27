@@ -252,6 +252,10 @@
             border-radius: 30px;
             overflow: hidden;
             height: 430px;
+
+            .hover-effect {
+                transform: scale(110%);
+            }
         }
     }
 

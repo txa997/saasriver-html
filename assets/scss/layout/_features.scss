@@ -433,6 +433,12 @@
         .title {
             font-size: 30px;
             letter-spacing: -0.03em;
+            transition: all .4s var(--sr-cube-1);
+
+            &:hover {
+                color: var(--sr-clr-pr-5);
+                transform: translateX(-3px);
+            }
 
             @media #{$xxl,$xl,$lg,$md,$xs} {
                 font-size: 22px;
@@ -460,6 +466,14 @@
                 display: flex;
                 align-items: center;
                 gap: 10px;
+            }
+        }
+
+        &:hover {
+            .icon {
+                img, i {
+                    animation: pulse 1s;
+                }
             }
         }
         

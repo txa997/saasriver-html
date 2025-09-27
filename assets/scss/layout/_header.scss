@@ -542,7 +542,7 @@
 
 .phone-btn-5 {
     color: var(--sr-clr-black-8);
-
+    transition: all .4s var(--sr-cube-1);
     .icon {
         width: 45px;
         height: 45px;
@@ -554,6 +554,11 @@
         font-size: 16px;
         color: #fff;
         margin-right: 8px;
+        transition: all .4s var(--sr-cube-1);
+    }
+
+    &:hover {
+        color: var(--sr-clr-pr-5);
     }
 }
 

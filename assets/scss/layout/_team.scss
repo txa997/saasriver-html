@@ -257,3 +257,118 @@
 /* 
     team-4-end
 */
+/* 
+    team-5-start
+*/
+.sr-team-5 {
+    &-wrap {
+        max-width: 1125px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    &-wrap-2 {
+        display: flex;
+        flex-direction: column;
+        gap: 35px;
+    }
+
+    &-member {
+        background-color: #f8f4ff;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 1fr 2.4fr;
+        gap: 50px;
+        padding: 40px 35px;
+        align-items: center;
+
+        @media #{$md} {
+            grid-template-columns: 1fr 2fr;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+        @media #{$xs} {
+            grid-template-columns: 1fr;
+            gap: 30px;
+            padding: 40px 20px;
+        }
+
+        .member-img {
+            border-radius: 20px;
+            height: 290px;
+            perspective: 2000px;
+            transform-style: preserve-3d;
+
+            img {
+                transition: all 1s var(--sr-cube-1);
+            }
+        }
+
+        .member-social {
+            display: flex;
+            gap: 10px;
+
+            .link-elm {
+                flex: 0 0 auto;
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 40px;
+                height: 40px;
+                background: #000;
+                border-radius: 50%;
+                color: #fff;
+                font-size: 16px;
+                transition: all .5s var(--sr-cube-1);
+
+                &:hover {
+                    background-color: var(--sr-clr-sd-5);
+                }
+            }
+        }
+
+        .member-dg {
+            font-size: 23px;
+            max-width: 650px;
+            margin-top: 22px;
+
+            @media #{$md,$xs} {
+                font-size: 18px;
+            }
+        }
+
+
+        .member-name {
+            display: inline-block;
+            font-weight: 700;
+            letter-spacing: -0.03em;
+            font-size: 28px;
+            background: linear-gradient(135deg, #000 35%, #f46800);
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-top: 40px;
+
+            @media #{$xs} {
+                font-size: 24px;
+            }
+        }
+
+        &:hover {
+            .member-img {
+                img {
+                    transform-origin: 50% 100%;
+                    transform: rotateX(5deg) scale3d(1.05, 1.05, 1);
+                }
+            }
+        }
+
+        &:nth-child(2) {
+            background: #f4fffd;
+        }
+    }
+}
+
+
+/* 
+    team-5-end
+*/

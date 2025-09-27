@@ -53,6 +53,30 @@
   animation-timing-function: var(--sr-cube-1);
 }
 
+@keyframes fadeInLeft2 {
+  0% {
+    opacity: 0;
+    -webkit-transform: translateX(-50px);
+    -ms-transform: translateX(-50px);
+    transform: translateX(-50px);
+    filter: blur(3px);
+  }
+
+  100% {
+    -webkit-transform: translateX(0);
+    -ms-transform: translateX(0);
+    transform: translateX(0);
+    filter: blur(0px);
+  }
+}
+
+.fadeInLeft2 {
+  -webkit-animation-name: fadeInLeft2;
+  animation-name: fadeInLeft2;
+  animation-duration: 800ms;
+  animation-timing-function: var(--sr-cube-1);
+}
+
 
 @keyframes slideInUp2 {
   0% {

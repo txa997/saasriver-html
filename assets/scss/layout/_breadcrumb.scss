@@ -1,0 +1,121 @@
+
+/* 
+    breadcrumb-start
+*/
+
+
+.sr-breadcrumb {
+    &-area {
+        padding-top: 250px;
+        padding-bottom: 135px;
+        background-color: #e8f1f829;
+    }
+
+
+    &-wrap {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        position: relative;
+        z-index: 1;
+        align-items: center;
+    }
+
+    &-title {
+        font-family: var(--sr-font-1);
+        font-size: 56px;
+        line-height: 1.066;
+        color: #000;
+        font-weight: 700;
+        margin-bottom: 0;
+    
+    
+        @media #{$xl} {
+            font-size: 55px;
+        }
+    
+        @media #{$lg} {
+            font-size: 50px;
+        }
+    
+        @media #{$md} {
+            font-size: 45px;
+        }
+    
+        @media #{$xs} {
+            font-size: 35px;
+        }
+    
+        @media #{$sm} {
+            font-size: 40px;
+        }
+
+    }
+
+    &-list {
+        padding: 14px 30px;
+        border-radius: 10px;
+        display: inline-block;
+        background: rgba(255, 255, 255, 0.5215686275);
+        border: 1px solid rgb(96 91 255 / 10%);
+        box-shadow: 0px -4px 4px 0px rgb(0 0 0 / 20%) inset;
+
+        & a,& span {
+            font-weight: 500;
+            font-size: 18px;
+            font-family: var(--sr-font-1);
+            line-height: 28px;
+            color: #000;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        & a {
+            padding-right: 33px;
+            position: relative;
+            transition: 300ms;
+            margin-right: 9px;
+
+            &:hover {
+                color: var(--sr-clr-pr-1);
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                right: 0px;
+                top: 13px;
+                transform: translateY(-50%);
+                background-image: url(../img/breadcrumb/icon.svg);
+                width: 21px;
+                height: 24px;
+            }
+        }
+        & span {
+            opacity: 60%;
+        }
+
+        &-shape {
+            position: absolute;
+            bottom: 220%;
+            right: 113%;
+            z-index: -1;
+
+            @media #{$lg,$md,$xs} {
+                display: none;
+            }
+        }
+    }
+
+
+        
+
+
+}
+
+
+
+/* 
+    breadcrumb-end
+*/
+

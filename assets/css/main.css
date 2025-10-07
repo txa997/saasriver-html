@@ -9929,6 +9929,109 @@ input:focus::placeholder, textarea:focus::placeholder {
     footer-5-end
 */
 /* 
+    breadcrumb-start
+*/
+.sr-breadcrumb-area {
+  padding-top: 250px;
+  padding-bottom: 135px;
+  background-color: rgba(232, 241, 248, 0.1607843137);
+}
+.sr-breadcrumb-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  position: relative;
+  z-index: 1;
+  align-items: center;
+}
+.sr-breadcrumb-title {
+  font-family: var(--sr-font-1);
+  font-size: 56px;
+  line-height: 1.066;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 0;
+}
+@media only screen and (min-width: 1200px) and (max-width: 1399px) {
+  .sr-breadcrumb-title {
+    font-size: 55px;
+  }
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sr-breadcrumb-title {
+    font-size: 50px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+  .sr-breadcrumb-title {
+    font-size: 45px;
+  }
+}
+@media (max-width: 767px) {
+  .sr-breadcrumb-title {
+    font-size: 35px;
+  }
+}
+@media only screen and (min-width: 576px) and (max-width: 767px) {
+  .sr-breadcrumb-title {
+    font-size: 40px;
+  }
+}
+.sr-breadcrumb-list {
+  padding: 14px 30px;
+  border-radius: 10px;
+  display: inline-block;
+  background: rgba(255, 255, 255, 0.5215686275);
+  border: 1px solid rgba(96, 91, 255, 0.1);
+  box-shadow: 0px -4px 4px 0px rgba(0, 0, 0, 0.2) inset;
+}
+.sr-breadcrumb-list a, .sr-breadcrumb-list span {
+  font-weight: 500;
+  font-size: 18px;
+  font-family: var(--sr-font-1);
+  line-height: 28px;
+  color: #000;
+  text-decoration: none;
+  display: inline-block;
+}
+.sr-breadcrumb-list a {
+  padding-right: 33px;
+  position: relative;
+  transition: 300ms;
+  margin-right: 9px;
+}
+.sr-breadcrumb-list a:hover {
+  color: var(--sr-clr-pr-1);
+}
+.sr-breadcrumb-list a::after {
+  content: "";
+  position: absolute;
+  right: 0px;
+  top: 13px;
+  transform: translateY(-50%);
+  background-image: url(../img/breadcrumb/icon.svg);
+  width: 21px;
+  height: 24px;
+}
+.sr-breadcrumb-list span {
+  opacity: 60%;
+}
+.sr-breadcrumb-list-shape {
+  position: absolute;
+  bottom: 220%;
+  right: 113%;
+  z-index: -1;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px), only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sr-breadcrumb-list-shape {
+    display: none;
+  }
+}
+
+/* 
+    breadcrumb-end
+*/
+/* 
     pages
 */
 /* 

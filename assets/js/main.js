@@ -323,54 +323,197 @@ function initAfterPreloader() {
 */
 function afterPageLoad() {
 
-    /* 
-        hero-2-svg-animation
-    */
-    gsap.utils.toArray(".main-line").forEach((path, i) => {
-        let moveLine = document.querySelectorAll(".move-line")[i];
-        gsap.set(moveLine, { opacity: 0 });
-        if (moveLine) {
-            gsap.to(moveLine, {
-                duration: 8,
-                repeat: -1,
-                ease: "none",
-                delay: i === 0 ? 0 : 2.8, 
-                motionPath: {
-                    path: path,
-                    align: path,
-                    autoRotate: true,
-                    alignOrigin: [0.5, 0.5],
-                    start: 1,   
-                    end: 0      
-                },
-                onStart: () => gsap.to(moveLine, { opacity: 1, duration: 0.3 }),
-            });
-        }
-    });
+
+    if($(".sr-hero-2-apps-svg").length) {
+
+        gsap.set(".move-line1 , .move-line2, .move-line3", { opacity: 0 });
+        let srH2svg = gsap.timeline({
+            repeat: -1,
+            ease: "sine.inOut",
+        });
+    
+        srH2svg.to(".move-line1", {
+            duration: 10,
+            motionPath: {
+                path: ".main-line1",
+                align: ".main-line1",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line1", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line1", { opacity: 0, duration: 0.3 }),
+        });
+    
+        srH2svg.to(".move-line2", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line2",
+                align: ".main-line2",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line2", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line2", { opacity: 0, duration: 0.3 }),
+        },"2");
+    
+        srH2svg.to(".move-line3", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line3",
+                align: ".main-line3",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line3", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line3", { opacity: 0, duration: 0.3 }),
+        },"<=");
+    
+        srH2svg.to(".move-line3", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line3",
+                align: ".main-line3",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line3", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line3", { opacity: 0, duration: 0.3 }),
+        });
+    
+        srH2svg.to(".move-line2", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line2",
+                align: ".main-line2",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line2", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line2", { opacity: 0, duration: 0.3 }),
+        }, "<=");
         
-    gsap.utils.toArray(".main-line2").forEach((path, i) => {
-        let moveLine2 = document.querySelectorAll(".move-line2")[i];
-        gsap.set(moveLine2, { opacity: 0 });
-        if (moveLine2) {
-            gsap.to(moveLine2, {
-                duration: 8,
-                repeat: -1,
-                ease: "none",
-                delay: i === 0 ? 0 : 2.8, 
-                motionPath: {
-                    path: path,
-                    align: path,
-                    autoRotate: true,
-                    alignOrigin: [0.5, 0.5],
-                    start: 1,   
-                    end: 0      
-                },
-                onStart: () => gsap.to(moveLine2, { opacity: 1, duration: 0.3 })
-            });
-        }
-    });
+    
+        srH2svg.to(".move-line1", {
+            duration: 10,
+            motionPath: {
+                path: ".main-line1",
+                align: ".main-line1",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line1", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line1", { opacity: 0, duration: 0.3 }),
+        },"<2");
+    }
+    
 
+    if($(".sr-hero-2-apps-svg-2").length) {
 
+        gsap.set(".move-line21 , .move-line22, .move-line23", { opacity: 0 });
+        let srH2svg2 = gsap.timeline({
+            repeat: -1,
+            ease: "none",
+    
+        });
+    
+        srH2svg2.to(".move-line21", {
+            duration: 10,
+            motionPath: {
+                path: ".main-line21",
+                align: ".main-line21",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line21", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line21", { opacity: 0, duration: 0.3 }),
+        });
+    
+        srH2svg2.to(".move-line22", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line22",
+                align: ".main-line22",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line22", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line22", { opacity: 0, duration: 0.3 }),
+        },"2");
+    
+        srH2svg2.to(".move-line23", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line23",
+                align: ".main-line23",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line23", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line23", { opacity: 0, duration: 0.3 }),
+        },"<=");
+    
+        srH2svg2.to(".move-line23", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line23",
+                align: ".main-line23",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line23", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line23", { opacity: 0, duration: 0.3 }),
+        });
+    
+        srH2svg2.to(".move-line22", {
+            duration: 6,
+            motionPath: {
+                path: ".main-line22",
+                align: ".main-line22",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line22", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line22", { opacity: 0, duration: 0.3 }),
+        }, "<=");
+        
+    
+        srH2svg2.to(".move-line21", {
+            duration: 10,
+            motionPath: {
+                path: ".main-line21",
+                align: ".main-line21",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line21", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line21", { opacity: 0, duration: 0.3 }),
+        },"<2");
+    }
+    
 
 	/* 
 		add-active-class

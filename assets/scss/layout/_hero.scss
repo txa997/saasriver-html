@@ -268,6 +268,18 @@
                 &:nth-child(2) {
                     margin-left: 15px;
                 }
+
+                &:last-child {
+                    margin-top: -120px;
+
+                    @media #{$lg} {
+                        margin-top: -80px;
+                    }
+
+                    @media #{$md,$xs} {
+                        margin-top: 0px;
+                    }
+                }
             }
         }
 
@@ -308,7 +320,8 @@
             border-radius: 24px;
             padding: 10px;
             position: relative;
-            /* z-index: 1; */
+            margin-top: -96px;
+            margin-left: -30px;
         
             &-shadow {
                 width: 100%;
@@ -348,6 +361,17 @@
                 &:nth-child(2) {
                     margin-right: 15px;
                 }
+                &:last-child {
+                    margin-top: -120px;
+
+                    @media #{$lg} {
+                        margin-top: -80px;
+                    }
+
+                    @media #{$md,$xs} {
+                        margin-top: 0px;
+                    }
+                }
             }
         }
 
@@ -362,6 +386,10 @@
             @media #{$md,$xs} {
                 display: none;
             }
+
+            // .main-line1,.main-line2,.main-line3,.main-line4 {
+            //     stroke: red;
+            // }
         }
         
         
@@ -379,7 +407,6 @@
         }
     }
 }
-
 
 
 /* 

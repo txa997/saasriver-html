@@ -3326,6 +3326,19 @@ input:focus::placeholder, textarea:focus::placeholder {
 .sr-hero-2-apps .left .sr-hero-2-apps-logo:nth-child(2) {
   margin-left: 15px;
 }
+.sr-hero-2-apps .left .sr-hero-2-apps-logo:last-child {
+  margin-top: -120px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sr-hero-2-apps .left .sr-hero-2-apps-logo:last-child {
+    margin-top: -80px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sr-hero-2-apps .left .sr-hero-2-apps-logo:last-child {
+    margin-top: 0px;
+  }
+}
 .sr-hero-2-apps-logo {
   display: inline-flex;
   align-items: center;
@@ -3359,7 +3372,8 @@ input:focus::placeholder, textarea:focus::placeholder {
   border-radius: 24px;
   padding: 10px;
   position: relative;
-  /* z-index: 1; */
+  margin-top: -96px;
+  margin-left: -30px;
 }
 .sr-hero-2-apps-big-logo-shadow {
   width: 100%;
@@ -3395,6 +3409,19 @@ input:focus::placeholder, textarea:focus::placeholder {
 }
 .sr-hero-2-apps .right .sr-hero-2-apps-logo:nth-child(2) {
   margin-right: 15px;
+}
+.sr-hero-2-apps .right .sr-hero-2-apps-logo:last-child {
+  margin-top: -120px;
+}
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+  .sr-hero-2-apps .right .sr-hero-2-apps-logo:last-child {
+    margin-top: -80px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 991px), (max-width: 767px) {
+  .sr-hero-2-apps .right .sr-hero-2-apps-logo:last-child {
+    margin-top: 0px;
+  }
 }
 .sr-hero-2-apps-svg {
   position: absolute;

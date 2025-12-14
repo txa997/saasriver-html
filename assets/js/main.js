@@ -326,7 +326,7 @@ function afterPageLoad() {
 
     if($(".sr-hero-2-apps-svg").length) {
 
-        gsap.set(".move-line1 , .move-line2, .move-line3", { opacity: 0 });
+        gsap.set(".move-line1 , .move-line2, .move-line3, .move-line4", { opacity: 0 });
         let srH2svg = gsap.timeline({
             repeat: -1,
             ease: "sine.inOut",
@@ -345,6 +345,20 @@ function afterPageLoad() {
             onStart: () => gsap.to(".move-line1", { opacity: 1, duration: 0.3 }),
             onComplete: () => gsap.to(".move-line1", { opacity: 0, duration: 0.3 }),
         });
+
+        srH2svg.to(".move-line4", {
+            duration: 8,
+            motionPath: {
+                path: ".main-line4",
+                align: ".main-line4",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line4", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line4", { opacity: 0, duration: 0.3 }),
+        },"1");
     
         srH2svg.to(".move-line2", {
             duration: 6,
@@ -374,6 +388,22 @@ function afterPageLoad() {
             onComplete: () => gsap.to(".move-line3", { opacity: 0, duration: 0.3 }),
         },"<=");
     
+
+    
+        srH2svg.to(".move-line4", {
+            duration: 8,
+            motionPath: {
+                path: ".main-line4",
+                align: ".main-line4",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line4", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line4", { opacity: 0, duration: 0.3 }),
+        });
+    
         srH2svg.to(".move-line3", {
             duration: 6,
             motionPath: {
@@ -386,7 +416,7 @@ function afterPageLoad() {
             },
             onStart: () => gsap.to(".move-line3", { opacity: 1, duration: 0.3 }),
             onComplete: () => gsap.to(".move-line3", { opacity: 0, duration: 0.3 }),
-        });
+        }, "<=");
     
         srH2svg.to(".move-line2", {
             duration: 6,
@@ -419,9 +449,10 @@ function afterPageLoad() {
     }
     
 
+
     if($(".sr-hero-2-apps-svg-2").length) {
 
-        gsap.set(".move-line21 , .move-line22, .move-line23", { opacity: 0 });
+        gsap.set(".move-line21 , .move-line22, .move-line23, .move-line24", { opacity: 0 });
         let srH2svg2 = gsap.timeline({
             repeat: -1,
             ease: "none",
@@ -442,6 +473,20 @@ function afterPageLoad() {
             onComplete: () => gsap.to(".move-line21", { opacity: 0, duration: 0.3 }),
         });
     
+        srH2svg2.to(".move-line24", {
+            duration: 8,
+            motionPath: {
+                path: ".main-line24",
+                align: ".main-line24",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 1,
+                end: 0,
+            },
+            onStart: () => gsap.to(".move-line24", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line24", { opacity: 0, duration: 0.3 }),
+        },"1");
+
         srH2svg2.to(".move-line22", {
             duration: 6,
             motionPath: {
@@ -470,6 +515,20 @@ function afterPageLoad() {
             onComplete: () => gsap.to(".move-line23", { opacity: 0, duration: 0.3 }),
         },"<=");
     
+        srH2svg2.to(".move-line24", {
+            duration: 8,
+            motionPath: {
+                path: ".main-line24",
+                align: ".main-line24",
+                autoRotate: true,
+                alignOrigin: [0.5, 0.5],
+                start: 0,
+                end: 1,
+            },
+            onStart: () => gsap.to(".move-line24", { opacity: 1, duration: 0.3 }),
+            onComplete: () => gsap.to(".move-line24", { opacity: 0, duration: 0.3 }),
+        });
+
         srH2svg2.to(".move-line23", {
             duration: 6,
             motionPath: {
@@ -482,7 +541,7 @@ function afterPageLoad() {
             },
             onStart: () => gsap.to(".move-line23", { opacity: 1, duration: 0.3 }),
             onComplete: () => gsap.to(".move-line23", { opacity: 0, duration: 0.3 }),
-        });
+        }, "<=");
     
         srH2svg2.to(".move-line22", {
             duration: 6,
